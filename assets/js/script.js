@@ -107,13 +107,13 @@ if (document.querySelector(".hero-slider")) {
 }
 
 // ========================================================================================
-// CURRENT WORKS
+// CURRENT WORKS & INSTAGRAM
 // ========================================================================================
-if (document.querySelector(".works-slider")) {
-  let currentWorks = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".works-slider", {
+if (document.querySelector(".worksAndInsta-slider")) {
+  let worksAndInsta = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".worksAndInsta-slider", {
     modules: [A, P, N, Px, EC, T],
     slidesPerView: 3.5,
-    speed: 1000,
+    speed: 1500,
     spaceBetween: 32,
     watchSlidesProgress: true,
     parallax: true,
@@ -121,13 +121,13 @@ if (document.querySelector(".works-slider")) {
     direction: "horizontal",
     allowTouchMove: true,
     navigation: {
-      nextEl: ".works-next",
-      prevEl: ".works-prev",
+      nextEl: ".worksAndInsta-next",
+      prevEl: ".worksAndInsta-prev",
       disabledClass: "disabled"
+    },
+    autoplay: {
+      delay: 5000
     }
-    // autoplay: {
-    //     delay: 8000,
-    // },
   });
 }
 
@@ -455,42 +455,6 @@ window.initMap = function () {
   });
 };
 window.initMap = initMap;
-
-/***/ }),
-
-/***/ "./dev/script/components/modules/addDelayToChilds.js":
-/*!***********************************************************!*\
-  !*** ./dev/script/components/modules/addDelayToChilds.js ***!
-  \***********************************************************/
-/***/ (function() {
-
-// ! its only support maximum of 10 child
-
-// * add 'addDelayToChilds' with starter value to the parent element
-
-// ?    <div addDelayToChilds="1">
-// ?        <h1 class="animate-bounce">test</h1>
-// ?        <h2 class="animate-bounce">test 2</h2>
-// ?        <h3 class="animate-bounce">test 3</h2>
-// ?        <h1 class="animate-bounce">test 4</h1>
-// ?        <h2 class="animate-bounce">test 5</h2>
-// ?        <h3 class="animate-bounce">test 6</h2>
-// ?        <h1 class="animate-bounce">test 7</h1>
-// ?        <h2 class="animate-bounce">test 8</h2>
-// ?        <h3 class="animate-bounce">test 9</h2>
-// ?    </div >
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (document.querySelectorAll('[addDelayToChilds]')) {
-    document.querySelectorAll('[addDelayToChilds]').forEach(element => {
-      element.querySelectorAll('*').forEach((subElement, i) => {
-        subElement.style.transitionDelay = `${(element.getAttribute('addDelayToChilds') + i) / 10}s`;
-        subElement.style.animationDelay = `${(element.getAttribute('addDelayToChilds') + i) / 10}s`;
-      });
-      i = 0;
-    });
-  }
-});
 
 /***/ }),
 
@@ -19411,8 +19375,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modules_mouseEnterEffectTranslate__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_modules_mouseEnterEffectTranslate__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _components_modules_mouseEnterEffectRotate__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modules/mouseEnterEffectRotate */ "./dev/script/components/modules/mouseEnterEffectRotate.js");
 /* harmony import */ var _components_modules_mouseEnterEffectRotate__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_modules_mouseEnterEffectRotate__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_modules_addDelayToChilds__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/modules/addDelayToChilds */ "./dev/script/components/modules/addDelayToChilds.js");
-/* harmony import */ var _components_modules_addDelayToChilds__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_modules_addDelayToChilds__WEBPACK_IMPORTED_MODULE_9__);
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/modules/addDelayToChilds'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var _components_test__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/test */ "./dev/script/components/test.js");
 /* harmony import */ var _components_test__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_test__WEBPACK_IMPORTED_MODULE_10__);
 

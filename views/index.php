@@ -99,6 +99,26 @@ $services = [
 ];
 ?>
 
+<?php
+$instagram = [
+    [
+        'img' => '../assets/image/trademark/insta-1.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/insta-2.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/insta-3.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/insta-4.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/insta-5.jpeg',
+    ],
+];
+?>
+
 <main>
     <section class="h-svh w-ful relative">
         <div class="swiper hero-slider w-full h-full">
@@ -193,7 +213,7 @@ $services = [
             </button>
             <!-- close button -->
             <div data-toggle data-target="#rentform"
-                class="opacity-0 [&.active]:opacity-100 group-hover/form:opacity-100 hover:opacity-100 absolute top-0 -translate-y-1/2 right-[-45px] bg-white/80 w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer duration-1000 group/btn">
+                class="opacity-0 [&.active]:opacity-100 [&.active]:rounded-l-none group-hover/form:opacity-100 hover:opacity-100 absolute top-0 -translate-y-1/2 right-[-45px] bg-white/80 w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer duration-1000 group/btn">
                 <svg class="group-[&.active]/btn:rotate-180 duration-450" width="12" height="15" viewBox="0 0 22 42"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21 1L1 21L21 41" stroke="#FF7757" stroke-width="8" stroke-linecap="round"
@@ -213,13 +233,15 @@ $services = [
                     olun</p>
             </div>
             <div class="flex items-center gap-[40px]">
-                <button class="works-prev w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center">
+                <button
+                    class="worksAndInsta-prev w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
                         <path d="M11 1L1 11L11 21" stroke="white" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
                 </button>
-                <button class=" works-next w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center">
+                <button
+                    class="worksAndInsta-next w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
                         <path d="M1 21L11 11L0.999999 1" stroke="white" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
@@ -228,7 +250,7 @@ $services = [
             </div>
         </div>
         <!-- slider -->
-        <div class="works-slider swiper w-full !h-[660px] mt-[100px]">
+        <div class="worksAndInsta-slider swiper w-full !h-[660px] mt-[100px]">
             <div class="swiper-wrapper">
                 <?php foreach ($currentWorks as $key => $item): ?>
                     <div
@@ -312,21 +334,89 @@ $services = [
         </div>
     </section>
 
-    <section class="pt-[280px] px-[182px] relative">
+    <section class="pt-[280px] pb-[140px] px-[182px] relative">
         <!-- title -->
-        <div class="flex items-end justify-between pr-[182px] z-10">
-            <div class="flex flex-col">
-                <h2 class="text-[64px]">Hakkımızda</h2>
-                <div class="w-[365px] h-[4px] bg-primary"></div>
-                <p class="text-text text-[24px] pt-[32px]">
-                    Konforlu Yolculuklar için Güvenli ve Estetik Çözümler
+        <div class="flex flex-col">
+            <h2 class="text-[64px]">Hakkımızda</h2>
+            <div class="w-[365px] h-[4px] bg-primary"></div>
+            <p class="text-text text-[24px] pt-[32px]">
+                Konforlu Yolculuklar için <strong>Esstetik</strong> ve <strong>Sağlam</strong> Çözümler
+            </p>
+        </div>
+        <!-- content -->
+        <div class="pt-[100px] grid grid-cols-[760px,1fr] gap-[80px] items-center">
+            <div class="overflow-hidden rounded-[26px] w-full h-[870px]">
+                <video class="w-full h-full object-cover" width="320" height="240" autoplay muted>
+                    <source src="../assets/image/trademark/about.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div>
+                <h1 class="text-[54px] text-primary font-medium">Essa Karavan</h1>
+                <h3 class="text-[40px] pt-[50px] font-medium">
+                    Doğaya Uzanan Yolculuklarınızın <br>
+                    En Güvenli Durağı
+                </h3>
+                <p class="text-[24px] text-text pt-[5px] font-medium leading-[52px]">
+                    Essa Karavan, macera dolu yolculuklarınız için mükemmel bir ortak. İmalat, satış, kiralama ve yedek
+                    parça satışı alanlarında uzmanlaşmış olan firmamız, karavan tutkunlarının hayallerini gerçeğe
+                    dönüştürüyor. Her adımda kaliteye ve güvenliğe odaklanarak, Essa Karavan, sizin rüyalarınızı ve
+                    doğaya uzanan özgür ruhunuzu desteklemek için burada.
                 </p>
+                <a href="" class="flex items-center gap-[20px] text-primary text-[24px] pt-[24px]">
+                    <span>Devamını Oku</span>
+                    <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M27.7071 8.7071C28.0976 8.31658 28.0976 7.68342 27.7071 7.29289L21.3431 0.92893C20.9526 0.538406 20.3195 0.538406 19.9289 0.92893C19.5384 1.31945 19.5384 1.95262 19.9289 2.34314L25.5858 8L19.9289 13.6569C19.5384 14.0474 19.5384 14.6805 19.9289 15.0711C20.3195 15.4616 20.9526 15.4616 21.3431 15.0711L27.7071 8.7071ZM8.74228e-08 9L27 9L27 7L-8.74228e-08 7L8.74228e-08 9Z"
+                            fill="#FF7757" />
+                    </svg>
+                </a>
             </div>
         </div>
         <!-- bg line-->
-        <div class="w-full h-full absolute top-0 left-0 pointer-events-none z-0">
+        <div class="w-full h-full absolute top-0 left-0 pointer-events-none z-[-1]">
             <img class="w-full h-full object-cover" src="../assets/image/static/vektor-current-works.png" alt="">
         </div>
+    </section>
+
+    <section class="w-full h-full pl-[182px] bg-[#33403380] relative">
+        <div class="flex items-center gap-[100px]">
+            <!-- title -->
+            <div class="flex flex-col">
+                <h2 class="text-[64px] text-white">
+                    İnstagram <br>
+                    Gönderilerimiz
+                </h2>
+                <div class="w-[230px] h-[4px] bg-primary"></div>
+                <p class="text-[18px] pt-[32px] text-white">
+                    <strong>Essa karavan</strong>’ın instagram gönderilerini kaçırmamak <br>
+                    için takipte kalın.
+                </p>
+                <a href="https://www.instagram.com/essakaravan/" target="_blank"
+                    class="w-[205px] h-[60px] bg-primary rounded-[12px] mt-[62px] flex items-center justify-center text-white text-[18px] relative
+                    before:absolute before:top-[-13px] before:left-[-16px] before:w-[43px] before:h-[43px] before:bg-[#172432] before:rounded-[12px] before:z-[-1]
+                    after:absolute after:bottom-[-13px] after:right-[-16px] after:w-[43px] after:h-[43px] after:bg-[#7f8991] after:rounded-[12px] after:z-[-1]">
+                    Tüm Gönderileri gör
+                </a>
+            </div>
+            <!-- slider -->
+            <div class="worksAndInsta-slider swiper w-full h-full py-[190px]">
+                <div class="swiper-wrapper">
+                    <?php foreach ($instagram as $key => $item): ?>
+                        <div
+                            class="swiper-slide !h-[400px] [&.swiper-slide-next]:-translate-y-[56px] w-full rounded-[26px] pb-[40px] pl-[24px] flex items-end justify-start overflow-hidden relative duration-450 transition-all shadow-xl group">
+                            <a href="<?= $item['img'] ?>" data-fancybox="galley"
+                                class="absolute top-0 left-0 w-full h-full group-hover:scale-110 duration-450">
+                                <img class="w-full h-full object-cover" src="<?= $item['img'] ?>" alt="">
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-[140px]">
+
     </section>
 </main>
 

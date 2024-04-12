@@ -53,13 +53,13 @@ if (document.querySelector(".hero-slider")) {
 }
 
 // ========================================================================================
-// CURRENT WORKS
+// CURRENT WORKS & INSTAGRAM
 // ========================================================================================
-if (document.querySelector(".works-slider")) {
-    let currentWorks = new Swiper(".works-slider", {
+if (document.querySelector(".worksAndInsta-slider")) {
+    let worksAndInsta = new Swiper(".worksAndInsta-slider", {
         modules: [A, P, N, Px, EC, T],
         slidesPerView: 3.5,
-        speed: 1000,
+        speed: 1500,
         spaceBetween: 32,
         watchSlidesProgress: true,
         parallax: true,
@@ -67,12 +67,12 @@ if (document.querySelector(".works-slider")) {
         direction: "horizontal",
         allowTouchMove: true,
         navigation: {
-            nextEl: ".works-next",
-            prevEl: ".works-prev",
+            nextEl: ".worksAndInsta-next",
+            prevEl: ".worksAndInsta-prev",
             disabledClass: "disabled",
         },
-        // autoplay: {
-        //     delay: 8000,
-        // },
+        autoplay: {
+            delay: 5000,
+        },
     });
 }

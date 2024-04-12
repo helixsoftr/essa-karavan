@@ -1,9 +1,9 @@
 // GLOBAL VARIABLES
 // ------------------------------------------------------------
-window.body = document.querySelector('body');
-window.header = document.querySelector('header');
-window.footer = document.querySelector('footer');
-window.main = document.querySelector('main');
+window.body = document.querySelector("body");
+window.header = document.querySelector("header");
+window.footer = document.querySelector("footer");
+window.main = document.querySelector("main");
 window.windowWidth = window.innerWidth;
 window.windowHeight = window.innerHeight;
 window.mobileLimit = 1024;
@@ -12,8 +12,8 @@ window.mobileLimit = 1024;
 // ------------------------------------------------------------
 
 // FancyBox
-import { Fancybox } from '@fancyapps/ui'
-window.Fancybox = Fancybox
+import { Fancybox } from "@fancyapps/ui";
+window.Fancybox = Fancybox;
 
 // FancyBox Settings
 Fancybox.defaults.placeFocusBack = 0;
@@ -44,7 +44,7 @@ Fancybox.bind("[data-fancybox]", {
 
 // JS Cookie
 // --------------------------------------------------------
-import Cookies from 'js-cookie'
+import Cookies from "js-cookie";
 window.Cookies = Cookies;
 
 // PrintJS
