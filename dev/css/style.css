@@ -1,0 +1,97 @@
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+@import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css";
+/* @import '../../node_modules/flatpickr/dist/flatpickr.min.css';
+@import '../../node_modules/tippy.js/dist/tippy.css';
+@import '../../node_modules/tippy.js/animations/perspective.css'; */
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-VariableFont_wght.woff2") format("woff2 supports variations"),
+       url("../fonts/Raleway/Raleway-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 100 1000;
+}
+
+*, *:before, *:after { @apply box-border !outline-none; }
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video { @apply m-0 p-0 border-none text-[100%] [font:inherit] align-baseline [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [text-size-adjust:none]; }
+body { @apply text-[100%] leading-normal font-sans select-none bg-bodyBackgroundColor; }
+input, form, table, select, textarea, button { @apply font-sans text-[100%] leading-normal rounded-none !appearance-none resize-none outline-none border-none bg-transparent; }
+select::-ms-expand { @apply !hidden; }
+*, *:focus, *:focus-visible, *:hover, *:active, *::before, *::after { @apply !outline-none; }
+footer, header, nav, section, main, article { @apply block; }
+a, a:hover, a:active, a:focus, a:visited { @apply decoration-0; }
+ol, ul, menu { @apply list-none m-0 p-0; }    
+blockquote, q { @apply [quotes:none]; }
+blockquote:before, blockquote:after, q:before, q:after { @apply content-none; }
+table { @apply border-spacing-0 border-collapse; }
+input { @apply appearance-none; }
+svg { @apply overflow-visible block; }
+input[type=search]::-ms-clear { @apply hidden h-0 w-0; }
+input[type=search]::-ms-reveal { @apply hidden h-0 w-0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { @apply hidden; }
+strong {@apply !font-bold;}
+body {@apply scrollbar scrollbar-w-[5px] scrollbar-track-rounded-[5px] scrollbar-thumb-rounded-[5px] scrollbar-thumb-primary-500 scrollbar-track-primary-500/10}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar{
+  display: none;
+}
+
+html, body{
+    scroll-behavior: smooth!important;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.animate-gradient {
+    position: relative;
+}
+
+.animate-gradient::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #fafafa 8%, #f4f4f4 38%, #fafafa 54%);
+    background-size: 1000px 640px;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}

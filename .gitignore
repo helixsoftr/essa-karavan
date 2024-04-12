@@ -1,0 +1,14 @@
+/node_modules
+npm-debug.log
+yarn-error.log
+yarn.lock
+*/.DS_Store
+*.DS_Store
+.DS_Store
+*/.zip
+*.zip
+.zip
+
+/assets/js/script.js.map
+/assets/js/script.js.LICENSE.txt
+/assets/css/style.css.map
