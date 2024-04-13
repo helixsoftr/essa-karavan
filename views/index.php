@@ -119,6 +119,70 @@ $instagram = [
 ];
 ?>
 
+<?php
+$gallery = [
+    [
+        'img' => '../assets/image/trademark/gallery-1.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/gallery-2.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/gallery-3.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/gallery-4.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/gallery-1.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/gallery-2.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/gallery-3.jpg',
+    ],
+    [
+        'img' => '../assets/image/trademark/gallery-4.jpg',
+    ],
+];
+?>
+
+<?php
+$customersExperiences = [
+    [
+        'img' => '../assets/image/trademark/avatar-1.jpg',
+        'text' => 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.',
+        'name' => "Can Doe",
+    ],
+    [
+        'img' => '../assets/image/trademark/avatar-2.jpg',
+        'text' => 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.',
+        'name' => "Barış Ulu",
+    ],
+    [
+        'img' => '../assets/image/trademark/avatar-3.jpg',
+        'text' => 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.',
+        'name' => "Tuana Bilgin",
+    ],
+    [
+        'img' => '../assets/image/trademark/avatar-1.jpg',
+        'text' => 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.',
+        'name' => "Can Demir",
+    ],
+    [
+        'img' => '../assets/image/trademark/avatar-2.jpg',
+        'text' => 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.',
+        'name' => "Barış Ulu",
+    ],
+    [
+        'img' => '../assets/image/trademark/avatar-3.jpg',
+        'text' => 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.',
+        'name' => "Tuana Bilgin",
+    ],
+];
+?>
+
 <main>
     <section class="h-svh w-ful relative">
         <div class="swiper hero-slider w-full h-full">
@@ -234,15 +298,19 @@ $instagram = [
             </div>
             <div class="flex items-center gap-[40px]">
                 <button
-                    class="worksAndInsta-prev w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
+                    class="worksAndInsta-prev w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center relative overflow-hidden
+                    before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] hover:before:w-full before:duration-450 before:z-0">
+                    <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"
+                        fill="none">
                         <path d="M11 1L1 11L11 21" stroke="white" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
                 </button>
                 <button
-                    class="worksAndInsta-next w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
+                    class="worksAndInsta-next w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center relative overflow-hidden
+                    before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] hover:before:w-full before:duration-450 before:z-0">
+                    <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"
+                        fill="none">
                         <path d="M1 21L11 11L0.999999 1" stroke="white" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
@@ -275,20 +343,20 @@ $instagram = [
                             </div>
                         </div>
                         <!-- img -->
-                        <div
+                        <a href="<?= $item['img'] ?>" data-fancybox="currentWorks"
                             class="absolute top-0 left-0 z-0 w-full h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#1724324D] group-hover:before:bg-transparent before:duration-450 group-hover:scale-110 duration-450">
                             <img class="w-full h-full object-cover" src="<?= $item['img'] ?>" alt="">
-                        </div>
+                        </a>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
         <!-- bg line-->
-        <div class="w-full h-full absolute top-0 left-0 pointer-events-none z-0">
+        <div class="w-full h-full absolute top-0 left-0 pointer-events-none z-[-1]">
             <img class="w-full h-full object-cover" src="../assets/image/static/vektor-current-works.png" alt="">
         </div>
     </section>
-
+    <!-- services -->
     <section class="w-full h-full pt-[280px] px-[182px] relative">
         <!-- title -->
         <div class="flex items-end justify-between pr-[182px] z-10">
@@ -333,12 +401,12 @@ $instagram = [
             <img class="w-full h-full object-cover" src="../assets/image/static/vektor-services.png" alt="">
         </div>
     </section>
-
+    <!-- about us -->
     <section class="pt-[280px] pb-[140px] px-[182px] relative">
         <!-- title -->
         <div class="flex flex-col">
             <h2 class="text-[64px]">Hakkımızda</h2>
-            <div class="w-[365px] h-[4px] bg-primary"></div>
+            <div class="w-[150px] h-[4px] bg-primary"></div>
             <p class="text-text text-[24px] pt-[32px]">
                 Konforlu Yolculuklar için <strong>Esstetik</strong> ve <strong>Sağlam</strong> Çözümler
             </p>
@@ -377,7 +445,7 @@ $instagram = [
             <img class="w-full h-full object-cover" src="../assets/image/static/vektor-current-works.png" alt="">
         </div>
     </section>
-
+    <!-- instagram -->
     <section class="w-full h-full pl-[182px] bg-[#33403380] relative">
         <div class="flex items-center gap-[100px]">
             <!-- title -->
@@ -414,9 +482,91 @@ $instagram = [
             </div>
         </div>
     </section>
-
-    <section class="pt-[140px]">
-
+    <!-- customers gallery  -->
+    <section class="py-[140px] px-[182px]">
+        <!-- title -->
+        <div class="flex flex-col">
+            <h2 class="text-[64px]">Galeri</h2>
+            <div class="w-[283px] h-[4px] bg-primary"></div>
+            <p class="text-text text-[24px] pt-[32px]">
+                Müşterilerimizden gelen fotoğraf galerimiz
+            </p>
+        </div>
+        <!-- slider -->
+        <div class="swiper gallery-slider h-full pt-[140px] w-full">
+            <div
+                class="swiper-wrapper ![-webkit-transition-timing-function:linear] ![-o-transition-timing-function:linear] ![transition-timing-function:linear]">
+                <?php foreach ($gallery as $key => $item): ?>
+                    <a href="<?= $item['img'] ?>" data-fancybox="gallery-2"
+                        class="swiper-slide w-full h-[570px] overflow-hidden rounded-[26px]
+                                [&.swiper-slide-active]:-translate-y-[40px] [&.swiper-slide-next_+_.swiper-slide]:-translate-y-[40px] duration-1000 transition-all">
+                        <img class="w-full h-full object-cover" src="<?= $item['img'] ?>" alt="">
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <!-- customers experiences -->
+    <section class="py-[140px] pl-[182px]">
+        <!-- title -->
+        <div class="flex flex-col">
+            <h2 class="text-[64px]">Müşteri Deneyimleri</h2>
+            <div class="w-[347px] h-[4px] bg-primary"></div>
+            <p class="text-text text-[24px] pt-[32px]">
+                Müşterilerimizden gelen bazı harika geri bildirimler
+            </p>
+        </div>
+        <!-- swiper  -->
+        <div class="swiper customersExperiences-slider pt-[160px]">
+            <div class="swiper-wrapper">
+                <?php foreach ($customersExperiences as $key => $item): ?>
+                    <div class="swiper-slide">
+                        <div class="w-full h-full px-[40px] pt-[60px] pb-[40px] rounded-[12px] bg-[#F5F6F7] relative">
+                            <img class="rounded-full w-[100px] h-[100px] absolute top-[-60px] left-[40px]"
+                                src="<?= $item['img'] ?>" alt="">
+                            <div class="flex flex-col gap-[20px]">
+                                <!-- text -->
+                                <p class="text-text text-[18px]"><?= $item['text'] ?></p>
+                                <!-- stars -->
+                                <div class="flex items-center gap-[4px]">
+                                    <?php for ($i = 0; $i < 5; $i++): ?>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                                fill="#FFC107" />
+                                        </svg>
+                                    <?php endfor; ?>
+                                </div>
+                                <!-- name -->
+                                <p class="text-text text-[24px]"><?= $item['name'] ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <!-- buttons -->
+        <div class="w-full flex items-center justify-end  gap-[40px] pt-[100px] pr-[182px]">
+            <button
+                class="customersExperiences-prev w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center relative overflow-hidden
+                    before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] hover:before:w-full before:duration-450 before:z-0">
+                <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"
+                    fill="none">
+                    <path d="M11 1L1 11L11 21" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button
+                class="customersExperiences-next w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center relative overflow-hidden
+                    before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] hover:before:w-full before:duration-450 before:z-0">
+                <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"
+                    fill="none">
+                    <path d="M1 21L11 11L0.999999 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
     </section>
 </main>
 

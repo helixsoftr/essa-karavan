@@ -76,3 +76,51 @@ if (document.querySelector(".worksAndInsta-slider")) {
         },
     });
 }
+
+// ========================================================================================
+//  GALLERY
+// ========================================================================================
+if (document.querySelector(".gallery-slider")) {
+    let gallerySlider = new Swiper(".gallery-slider", {
+        modules: [A, P, N, Px, EC, T],
+        slidesPerView: 4,
+        spaceBetween: 32,
+        speed: 4000,
+        watchSlidesProgress: true,
+        parallax: true,
+        loop: true,
+        direction: "horizontal",
+        allowTouchMove: true,
+        freeMode: true,
+        autoplay: {
+            delay: 0.8,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: false,
+        },
+    });
+}
+
+// ========================================================================================
+//  CUSTOMERS EXPERİENCES
+// ========================================================================================
+if (document.querySelector(".customersExperiences-slider")) {
+    let customersExperiences = new Swiper(".customersExperiences-slider", {
+        modules: [A, P, N, Px, EC, T],
+        slidesPerView: 2.5,
+        speed: 1500,
+        spaceBetween: 32,
+        watchSlidesProgress: true,
+        parallax: true,
+        loop: true,
+        direction: "horizontal",
+        allowTouchMove: true,
+        navigation: {
+            nextEl: ".customersExperiences-next",
+            prevEl: ".customersExperiences-prev",
+            disabledClass: "disabled",
+        },
+        // autoplay: {
+        //     delay: 5000,
+        // },
+    });
+}
