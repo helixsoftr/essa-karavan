@@ -637,6 +637,35 @@ if (document.querySelector('[mouseEnterEffectTranslate]')) {
 
 /***/ }),
 
+/***/ "./dev/script/components/modules/stickyFollowMouse.js":
+/*!************************************************************!*\
+  !*** ./dev/script/components/modules/stickyFollowMouse.js ***!
+  \************************************************************/
+/***/ (function() {
+
+if (document.querySelectorAll("[data-follow]")) {
+  let parent = document.querySelectorAll('[data-follow="parent"]');
+  let child = document.querySelectorAll('[data-follow="childs"]');
+  let object = document.querySelector('[data-follow="object"]');
+  parent.forEach(pElement => {
+    pElement.addEventListener("mouseenter", () => {
+      let rect = pElement.getBoundingClientRect();
+      child.forEach(cElement => {
+        cElement.addEventListener("mouseenter", () => {
+          object.style.opacity = 1;
+          object.style.left = `${cElement.offsetLeft - 3}px`;
+          object.style.width = `${cElement.clientWidth + 6}px`;
+        });
+        cElement.addEventListener("mouseleave", () => {
+          object.style.opacity = 0;
+        });
+      });
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./dev/script/components/modules/variables.js":
 /*!****************************************************!*\
   !*** ./dev/script/components/modules/variables.js ***!
@@ -24955,12 +24984,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modules_variables__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/modules/variables */ "./dev/script/components/modules/variables.js");
 /* harmony import */ var _components_modules_dynamicNavbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modules/dynamicNavbar */ "./dev/script/components/modules/dynamicNavbar.js");
 /* harmony import */ var _components_modules_dynamicNavbar__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_modules_dynamicNavbar__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_modules_mouseEnterEffectTranslate__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modules/mouseEnterEffectTranslate */ "./dev/script/components/modules/mouseEnterEffectTranslate.js");
-/* harmony import */ var _components_modules_mouseEnterEffectTranslate__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_modules_mouseEnterEffectTranslate__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_modules_mouseEnterEffectRotate__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/modules/mouseEnterEffectRotate */ "./dev/script/components/modules/mouseEnterEffectRotate.js");
-/* harmony import */ var _components_modules_mouseEnterEffectRotate__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_modules_mouseEnterEffectRotate__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _components_test__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/test */ "./dev/script/components/test.js");
-/* harmony import */ var _components_test__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_test__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_modules_stickyFollowMouse__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modules/stickyFollowMouse */ "./dev/script/components/modules/stickyFollowMouse.js");
+/* harmony import */ var _components_modules_stickyFollowMouse__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_modules_stickyFollowMouse__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_modules_mouseEnterEffectTranslate__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/modules/mouseEnterEffectTranslate */ "./dev/script/components/modules/mouseEnterEffectTranslate.js");
+/* harmony import */ var _components_modules_mouseEnterEffectTranslate__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_modules_mouseEnterEffectTranslate__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_modules_mouseEnterEffectRotate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/modules/mouseEnterEffectRotate */ "./dev/script/components/modules/mouseEnterEffectRotate.js");
+/* harmony import */ var _components_modules_mouseEnterEffectRotate__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_modules_mouseEnterEffectRotate__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_test__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/test */ "./dev/script/components/test.js");
+/* harmony import */ var _components_test__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_test__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -24970,6 +25001,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // modules :
+
 
 
 

@@ -507,7 +507,7 @@ $customersExperiences = [
         </div>
     </section>
     <!-- customers experiences -->
-    <section class="py-[140px] pl-[182px]">
+    <section class="pt-[140px] pb-[280px] pl-[182px]">
         <!-- title -->
         <div class="flex flex-col">
             <h2 class="text-[64px]">Müşteri Deneyimleri</h2>

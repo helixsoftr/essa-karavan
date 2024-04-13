@@ -13,11 +13,13 @@ include 'data.php';
         <a href="index.php">
             <img src="../assets/image/trademark/logo-essa.png" alt="">
         </a>
-        <ul
+        <ul data-follow="parent"
             class="flex items-center gap-[50px] [&_:is(a)]:text-[20px] group-[&.is-static]/header:[&_:is(a)]:text-white  [&_:is(a)]:font-medium [&_:is(a)]:tracking-widest">
-            <li><a href="index.php">Anasayfa</a></li>
-            <li><a href="page-services.php">Hizmetlerimiz</a></li>
-            <li><a href="page-contact.php">İletişim</a></li>
+            <li data-follow="childs"><a href="index.php">Anasayfa</a></li>
+            <li data-follow="childs"><a href="page-services.php">Hizmetlerimiz</a></li>
+            <li data-follow="childs"><a href="page-contact.php">İletişim</a></li>
+            <span data-follow="object"
+                class="opacity-100 absolute bottom-0 left-0 block w-0 h-[4px] duration-1000 bg-primary pointer-events-none"></span>
         </ul>
         <a href=""
             class="w-[135px] h-[64px] rounded-[12px] bg-primary flex items-center justify-center relative duration-450
