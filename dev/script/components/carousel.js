@@ -119,8 +119,8 @@ if (document.querySelector(".customersExperiences-slider")) {
             prevEl: ".customersExperiences-prev",
             disabledClass: "disabled",
         },
-        // autoplay: {
-        //     delay: 5000,
-        // },
+        autoplay: {
+            delay: 10000,
+        },
     });
 }

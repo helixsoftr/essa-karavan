@@ -10,12 +10,12 @@ $heroSlider = [
     ],
     [
         'img' => '../assets/image/trademark/hero-slider-2.jpg',
-        'title' => 'Unutulmaz bir karavan deneyimi',
+        'title' => 'Esstetik ve Sağlam çözümler',
         'text' => 'The best travel for your jouney begins now',
     ],
     [
         'img' => '../assets/image/trademark/hero-slider-3.jpg',
-        'title' => 'Unutulmaz bir karavan deneyimi',
+        'title' => 'Özel hizmetler & çözümler',
         'text' => 'The best travel for your jouney begins now',
     ],
     [
@@ -25,7 +25,7 @@ $heroSlider = [
     ],
     [
         'img' => '../assets/image/trademark/hero-slider-5.jpg',
-        'title' => 'Unutulmaz bir karavan deneyimi',
+        'title' => 'Esstetik ve Sağlam çözümler',
         'text' => 'The best travel for your jouney begins now',
     ],
 ];
@@ -168,7 +168,7 @@ $customersExperiences = [
     [
         'img' => '../assets/image/trademark/avatar-1.jpg',
         'text' => 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.',
-        'name' => "Can Demir",
+        'name' => "Can Doe",
     ],
     [
         'img' => '../assets/image/trademark/avatar-2.jpg',
@@ -195,7 +195,7 @@ $customersExperiences = [
                             <!-- bg  -->
                             <div class="absolute left-0 top-0 w-full h-full bg-[#041722]/30"></div>
                         </div>
-                        <div class="absolute top-1/4 left-[182px] z-[40] [&_:is(h1,h2,h3,h4)]:text-[84px] [&_:is(h1,h2,h3,h4,h5,h6,p)]:text-white [&_:is(h5,h6,p)]:text-[24px] [&_:is(h1,h2,h3,h4)]:max-w-[700px]
+                        <div class="absolute top-1/4 left-[182px] z-[40] [&_:is(h1,h2,h3,h4)]:text-[84px] [&_:is(h1,h2,h3,h4,h5,h6,p)]:text-white [&_:is(h5,h6,p)]:text-[24px] [&_:is(h1,h2,h3,h4)]:max-w-[720px]
                             [&_:is(h1,h2,h3,h4,h5,h6,p)]:opacity-0 [&_:is(h1,h2,h3,h4,h5,h6,p)]:translate-y-full
                             group-[&.swiper-slide-active]:[&_:is(h1,h2,h3,h4,h5,h6,p)]:opacity-100 group-[&.swiper-slide-active]:[&_:is(h1,h2,h3,h4,h5,h6,p)]:translate-y-0
                             [&_:is(h1,h2,h3,h4)]:duration-1000 [&_:is(h1,h2,h3,h4)]:delay-500

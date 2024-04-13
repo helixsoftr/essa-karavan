@@ -172,10 +172,10 @@ if (document.querySelector(".customersExperiences-slider")) {
       nextEl: ".customersExperiences-next",
       prevEl: ".customersExperiences-prev",
       disabledClass: "disabled"
+    },
+    autoplay: {
+      delay: 10000
     }
-    // autoplay: {
-    //     delay: 5000,
-    // },
   });
 }
 

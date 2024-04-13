@@ -7,14 +7,14 @@ include 'head.php';
 include 'data.php';
 ?>
 
-<header class="h-[150px] px-[182px] fixed top-0 left-0 w-full bg-[#041722]/5 [&.is-hidden]:-translate-y-full [&.is-static]:!-translate-y-0 duration-450 z-[1000] flex items-center justify-center
-                border border-solid border-transparent border-b-[#041722]/20">
+<header class="h-[150px] px-[182px] fixed top-0 left-0 w-full bg-white/95 shadow-2xl [&.is-hidden]:-translate-y-full [&.is-static]:!bg-[#041722]/5 duration-450 z-[1000] flex items-center justify-center
+                border border-solid border-transparent border-b-[#041722]/20 group/header">
     <div class="w-full flex items-center justify-between">
         <a href="index.php">
             <img src="../assets/image/trademark/logo-essa.png" alt="">
         </a>
         <ul
-            class="flex items-center gap-[50px] [&_:is(a)]:text-[20px] [&_:is(a)]:text-white [&_:is(a)]:font-medium [&_:is(a)]:tracking-widest">
+            class="flex items-center gap-[50px] [&_:is(a)]:text-[20px] group-[&.is-static]/header:[&_:is(a)]:text-white  [&_:is(a)]:font-medium [&_:is(a)]:tracking-widest">
             <li><a href="index.php">Anasayfa</a></li>
             <li><a href="page-services.php">Hizmetlerimiz</a></li>
             <li><a href="page-contact.php">İletişim</a></li>
