@@ -12,7 +12,7 @@
  |
  |
  */
-const domain = 'helix-workspace.test';
+const domain = 'essa-karavan.test';
 const homedir = require('os').homedir();
 
 module.exports = {
