@@ -11,4 +11,4 @@ import "./components/modules/dynamicNavbar";
 import "./components/modules/stickyFollowMouse";
 import "./components/modules/mouseEnterEffectTranslate";
 import "./components/modules/mouseEnterEffectRotate";
-import "./components/test";
+import "./components/modules/manuelFocus";
