@@ -9,9 +9,9 @@
     <title>
         Anasayfa -         Essa Karavan    </title>
     <link rel="shortcut icon" href="../assets/image/trademark/logo-essa.png" type="image/x-icon">
-    <!-- Önbellek tutmasın diye ekledim; '?id1925738687' yazısını silersin -->
-    <link rel="stylesheet" href="../assets/css/style.css?id496532120">
-    <link rel="stylesheet" href="../assets/css/tailwind.css?id1639636716">
+    <!-- Önbellek tutmasın diye ekledim; '?id32832271' yazısını silersin -->
+    <link rel="stylesheet" href="../assets/css/style.css?id415070228">
+    <link rel="stylesheet" href="../assets/css/tailwind.css?id1398568458">
 </head>
 
 <body class="min-h-screen">
@@ -200,7 +200,7 @@
                     <input id="checkout" class="w-ful border border-solid border-transparent border-b-black pb-[10px]" type="date">
                 </div>
             </div>
-            <button type="submit" class="h-full w-[230px] bg-primary rounded-r-[20px] flex items-center justify-center gap-[35px]">
+            <button type="button" data-toggle data-target="#popupForm" class="h-full w-[230px] bg-primary rounded-r-[20px] flex items-center justify-center gap-[35px]">
                 <div class="text-white text-[36px]">Şimdi <br> Kirala</div>
                 <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M27.7071 8.7071C28.0976 8.31658 28.0976 7.68342 27.7071 7.29289L21.3431 0.928931C20.9526 0.538406 20.3195 0.538407 19.9289 0.928931C19.5384 1.31946 19.5384 1.95262 19.9289 2.34314L25.5858 8L19.9289 13.6569C19.5384 14.0474 19.5384 14.6805 19.9289 15.0711C20.3195 15.4616 20.9526 15.4616 21.3431 15.0711L27.7071 8.7071ZM6.79955e-08 9L27 9L27 7L-6.79955e-08 7L6.79955e-08 9Z" fill="white" />
@@ -969,7 +969,8 @@
         </div>
     </div>
 </footer>
-<div class="active fixed z-[9999] pointer-events-none [&.active]:pointer-events-auto opacity-0 [&.active]:opacity-100 top-0 left-0 w-full h-full duration-450 bg-white/50 backdrop-blur-lg">
+<div id="popupForm" class="group/wrapper fixed z-[9999] pointer-events-none [&.active]:pointer-events-auto opacity-0 [&.active]:opacity-100 top-0 left-0 w-full h-full duration-450 bg-white/50 backdrop-blur-lg">
+    <button class="fixed z-[9999] top-0 left-0 w-full h-full"></button>
     <div class="w-full h-full flex items-center justify-center">
         <div class="grid grid-cols-[1fr,2fr] items-center">
             <div class="flex flex-col gap-[60px] p-[40px_70px] rounded-l-[50px] bg-primary">
@@ -1009,7 +1010,7 @@
             </div>
             <div class="flex flex-col gap-[80px] p-[80px_100px] rounded-[50px] bg-white">
                 <div class="relative">
-                    <form id="offerFormManufactor" class="filtered absolute pointer-events-none opacity-0 [&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
+                    <form id="offerFormManufactor" class="filtered absolute pointer-events-none opacity-0 group-[&.active]/wrapper:[&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
                         <h2 class="col-span-2 text-5xl font-semibold bg-gradient-to-r from-[#FF7757] to-[#111111] bg-clip-text text-transparent">Kiralama Formu</h2>
                         <div class="group/each relative">
                             <label class="group-[&.active]/each:top-0 absolute pointer-events-none top-1/2 -translate-y-1/2 left-[0px] text-[#041722] text-xl font-normal duration-450" for="">İsim Soyisim*</label>
@@ -1046,7 +1047,7 @@
                             </button>
                         </div>
                     </form>
-                    <form id="offerFormRent" class="filtered absolute pointer-events-none opacity-0 [&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
+                    <form id="offerFormRent" class="filtered absolute pointer-events-none opacity-0 group-[&.active]/wrapper:[&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
                         <h2 class="col-span-2 text-5xl font-semibold bg-gradient-to-r from-[#FF7757] to-[#111111] bg-clip-text text-transparent">Satış Formu</h2>
                         <div class="group/each relative">
                             <label class="group-[&.active]/each:top-0 absolute pointer-events-none top-1/2 -translate-y-1/2 left-[0px] text-[#041722] text-xl font-normal duration-450" for="">İsim Soyisim*</label>
@@ -1083,7 +1084,7 @@
                             </button>
                         </div>
                     </form>
-                    <form id="offerFormSell" class="filtered absolute pointer-events-none opacity-0 [&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
+                    <form id="offerFormSell" class="filtered absolute pointer-events-none opacity-0 group-[&.active]/wrapper:[&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
                         <h2 class="col-span-2 text-5xl font-semibold bg-gradient-to-r from-[#FF7757] to-[#111111] bg-clip-text text-transparent">İmalat Formu</h2>
                         <div class="group/each relative">
                             <label class="group-[&.active]/each:top-0 absolute pointer-events-none top-1/2 -translate-y-1/2 left-[0px] text-[#041722] text-xl font-normal duration-450" for="">İsim Soyisim*</label>
@@ -1125,7 +1126,7 @@
         </div>
     </div>
 </div>
-<script src="../assets/js/script.js?id2136274630"></script>
+<script src="../assets/js/script.js?id1431824279"></script>
 
 </body>
 

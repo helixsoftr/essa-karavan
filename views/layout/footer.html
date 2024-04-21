@@ -110,7 +110,8 @@
         </div>
     </div>
 </footer>
-<div class="active fixed z-[9999] pointer-events-none [&.active]:pointer-events-auto opacity-0 [&.active]:opacity-100 top-0 left-0 w-full h-full duration-450 bg-white/50 backdrop-blur-lg">
+<div id="popupForm" class="group/wrapper fixed z-[9999] pointer-events-none [&.active]:pointer-events-auto opacity-0 [&.active]:opacity-100 top-0 left-0 w-full h-full duration-450 bg-white/50 backdrop-blur-lg">
+    <button class="fixed z-[9999] top-0 left-0 w-full h-full"></button>
     <div class="w-full h-full flex items-center justify-center">
         <div class="grid grid-cols-[1fr,2fr] items-center">
             <div class="flex flex-col gap-[60px] p-[40px_70px] rounded-l-[50px] bg-primary">
@@ -150,7 +151,7 @@
             </div>
             <div class="flex flex-col gap-[80px] p-[80px_100px] rounded-[50px] bg-white">
                 <div class="relative">
-                    <form id="offerFormManufactor" class="filtered absolute pointer-events-none opacity-0 [&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
+                    <form id="offerFormManufactor" class="filtered absolute pointer-events-none opacity-0 group-[&.active]/wrapper:[&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
                         <h2 class="col-span-2 text-5xl font-semibold bg-gradient-to-r from-[#FF7757] to-[#111111] bg-clip-text text-transparent">Kiralama Formu</h2>
                         <div class="group/each relative">
                             <label class="group-[&.active]/each:top-0 absolute pointer-events-none top-1/2 -translate-y-1/2 left-[0px] text-[#041722] text-xl font-normal duration-450" for="">İsim Soyisim*</label>
@@ -187,7 +188,7 @@
                             </button>
                         </div>
                     </form>
-                    <form id="offerFormRent" class="filtered absolute pointer-events-none opacity-0 [&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
+                    <form id="offerFormRent" class="filtered absolute pointer-events-none opacity-0 group-[&.active]/wrapper:[&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
                         <h2 class="col-span-2 text-5xl font-semibold bg-gradient-to-r from-[#FF7757] to-[#111111] bg-clip-text text-transparent">Satış Formu</h2>
                         <div class="group/each relative">
                             <label class="group-[&.active]/each:top-0 absolute pointer-events-none top-1/2 -translate-y-1/2 left-[0px] text-[#041722] text-xl font-normal duration-450" for="">İsim Soyisim*</label>
@@ -224,7 +225,7 @@
                             </button>
                         </div>
                     </form>
-                    <form id="offerFormSell" class="filtered absolute pointer-events-none opacity-0 [&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
+                    <form id="offerFormSell" class="filtered absolute pointer-events-none opacity-0 group-[&.active]/wrapper:[&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:relative grid grid-cols-2 gap-[80px] duration-450 transition-opacity " action="#">
                         <h2 class="col-span-2 text-5xl font-semibold bg-gradient-to-r from-[#FF7757] to-[#111111] bg-clip-text text-transparent">İmalat Formu</h2>
                         <div class="group/each relative">
                             <label class="group-[&.active]/each:top-0 absolute pointer-events-none top-1/2 -translate-y-1/2 left-[0px] text-[#041722] text-xl font-normal duration-450" for="">İsim Soyisim*</label>
@@ -266,7 +267,7 @@
         </div>
     </div>
 </div>
-<script src="../assets/js/script.js?id958364062"></script>
+<script src="../assets/js/script.js?id1806026043"></script>
 
 </body>
 
