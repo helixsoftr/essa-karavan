@@ -58,7 +58,7 @@ if (document.querySelector(".hero-slider")) {
 if (document.querySelector(".worksAndInsta-slider")) {
     let worksAndInsta = new Swiper(".worksAndInsta-slider", {
         modules: [A, P, N, Px, EC, T],
-        slidesPerView: 3.5,
+        slidesPerView: 1,
         speed: 1500,
         spaceBetween: 32,
         watchSlidesProgress: true,
@@ -74,6 +74,14 @@ if (document.querySelector(".worksAndInsta-slider")) {
         autoplay: {
             delay: 5000,
         },
+        breakpoints: {
+            1280: {
+                slidesPerView: 2.5,
+            },
+            1680: {
+                slidesPerView: 3.5,
+            }
+        }
     });
 }
 
@@ -83,20 +91,29 @@ if (document.querySelector(".worksAndInsta-slider")) {
 if (document.querySelector(".gallery-slider")) {
     let gallerySlider = new Swiper(".gallery-slider", {
         modules: [A, P, N, Px, EC, T],
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 32,
-        speed: 4000,
+        speed: 1000,
         watchSlidesProgress: true,
         parallax: true,
         loop: true,
         direction: "horizontal",
         allowTouchMove: true,
         freeMode: true,
-        autoplay: {
-            delay: 0.8,
-            disableOnInteraction: true,
-            pauseOnMouseEnter: false,
-        },
+        breakpoints: {
+            1280: {
+                slidesPerView: 3,
+            },
+            1680: {
+                speed: 4000,
+                slidesPerView: 4,
+                autoplay: {
+                    delay: 0.8,
+                    disableOnInteraction: true,
+                    pauseOnMouseEnter: false,
+                },
+            }
+        }
     });
 }
 
@@ -106,7 +123,7 @@ if (document.querySelector(".gallery-slider")) {
 if (document.querySelector(".customersExperiences-slider")) {
     let customersExperiences = new Swiper(".customersExperiences-slider", {
         modules: [A, P, N, Px, EC, T],
-        slidesPerView: 2.5,
+        slidesPerView: 1,
         speed: 1500,
         spaceBetween: 32,
         watchSlidesProgress: true,
@@ -122,5 +139,10 @@ if (document.querySelector(".customersExperiences-slider")) {
         autoplay: {
             delay: 10000,
         },
+        breakpoints: {
+            1280: {
+                slidesPerView: 2.5,
+            }
+        }
     });
 }

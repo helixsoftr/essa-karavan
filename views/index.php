@@ -183,23 +183,18 @@ $customersExperiences = [
 ];
 ?>
 
-<main>
-    <section class="h-svh w-ful relative">
-        <div class="swiper hero-slider w-full h-full">
+<main class="max-w-[100vw] overflow-hidden">
+    <section class="h-svh lg:h-auto w-ful relative">
+        <div class="swiper hero-slider w-full h-full lg:h-[50svh]">
             <div class="swiper-wrapper">
                 <?php foreach ($heroSlider as $key => $item) : ?>
                     <div class="swiper-slide overflow-hidden relative group">
                         <div class="w-full h-full relative">
                             <img data-swiper-parallax-y="15%" data-swiper-parallax-scale="1.5" class="object-cover w-full h-full" src="<?= $item['img'] ?>" alt="">
                             <!-- bg  -->
-                            <div class="absolute left-0 top-0 w-full h-full bg-[#041722]/30"></div>
+                            <div class="absolute left-0 top-0 w-full h-full bg-gradient-to-b from-[#041722]/50 to-[#041722]/25"></div>
                         </div>
-                        <div class="absolute top-1/4 left-[182px] z-[40] [&_:is(h1,h2,h3,h4)]:text-[84px] [&_:is(h1,h2,h3,h4,h5,h6,p)]:text-white [&_:is(h5,h6,p)]:text-[24px] [&_:is(h1,h2,h3,h4)]:max-w-[720px]
-                            [&_:is(h1,h2,h3,h4,h5,h6,p)]:opacity-0 [&_:is(h1,h2,h3,h4,h5,h6,p)]:translate-y-full
-                            group-[&.swiper-slide-active]:[&_:is(h1,h2,h3,h4,h5,h6,p)]:opacity-100 group-[&.swiper-slide-active]:[&_:is(h1,h2,h3,h4,h5,h6,p)]:translate-y-0
-                            [&_:is(h1,h2,h3,h4)]:duration-1000 [&_:is(h1,h2,h3,h4)]:delay-500
-                            [&_:is(h5,h6,p)]:duration-1000 [&_:is(h5,h6,p)]:delay-1000
-                            transition-all">
+                        <div navbar-spaceFix="padding" class="min-lg:!pt-0 absolute lg:px-[30px] top-1/4 lg:top-1/2 lg:-translate-y-1/2 left-[182px] lg:left-0 lg:flex lg:flex-col lg:items-center lg:text-center lg:justify-center lg:w-full z-[40] [&_:is(h1,h2,h3,h4)]:!leading-none [&_:is(h1,h2,h3,h4)]:text-[84px] [&_:is(h1,h2,h3,h4)]:3xl:text-6xl [&_:is(h1,h2,h3,h4)]:3xl:text-2xl [&_:is(h1,h2,h3,h4,h5,h6,p)]:text-white [&_:is(h5,h6,p)]:text-[24px] [&_:is(h5,h6,p)]:lg:text-xl [&_:is(h1,h2,h3,h4)]:max-w-[720px] [&_:is(h1,h2,h3,h4,h5,h6,p)]:opacity-0 [&_:is(h1,h2,h3,h4,h5,h6,p)]:translate-y-full group-[&.swiper-slide-active]:[&_:is(h1,h2,h3,h4,h5,h6,p)]:opacity-100 group-[&.swiper-slide-active]:[&_:is(h1,h2,h3,h4,h5,h6,p)]:translate-y-0 [&_:is(h1,h2,h3,h4)]:duration-1000 [&_:is(h1,h2,h3,h4)]:delay-500 [&_:is(h5,h6,p)]:duration-1000 [&_:is(h5,h6,p)]:delay-1000 transition-all">
                             <h2>
                                 <?= $item['title'] ?>
                             </h2>
@@ -212,7 +207,7 @@ $customersExperiences = [
             </div>
         </div>
         <!-- pagination -->
-        <div class="absolute z-[40] !left-auto right-[80px] !bottom-[50%] translate-y-1/2 flex flex-col items-center justify-center gap-[24px]">
+        <div class="lg:hidden absolute z-[40] !left-auto right-[80px] !bottom-[50%] translate-y-1/2 flex flex-col items-center justify-center gap-[24px]">
             <div class="hero-pagination !w-[16px] h-auto flex flex-col gap-[24px] [&_.swiper-pagination-bullet]:w-[16px] [&_.swiper-pagination-bullet]:h-[16px] [&_.swiper-pagination-bullet]:!m-0 [&_.swiper-pagination-bullet]:bg-white [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet-active]:!bg-primary [&_.swiper-pagination-bullet]:duration-450 [&_.swiper-pagination-bullet]:transition-all">
             </div>
             <div class="flex flex-col items-center justify-center gap-[16px]">
@@ -229,11 +224,8 @@ $customersExperiences = [
             </div>
         </div>
         <!-- rent form -->
-        <form id="rentform" class="w-[70%] h-[200px] bg-white rounded-r-[20px] pl-[80px] shadow-2xl z-[40] flex items-center justify-between gap-[100px]
-        absolute top-[65%] left-0
-        [&.active]:-translate-x-full duration-450
-        group/form">
-            <div class="w-full flex items-center gap-[40px]">
+        <form id="rentform" class="lg:rounded-none lg:w-full lg:static lg:flex lg:flex-col w-[70%] h-[200px] lg:h-auto lg:p-[30px] bg-white rounded-r-[20px] pl-[80px] shadow-2xl z-[40] flex items-center justify-between gap-[100px] lg:gap-[50px] absolute top-[65%] left-0 [&.active]:-translate-x-full duration-450 group/form">
+            <div class="w-full flex lg:flex-col items-center gap-[40px]">
                 <!-- destination -->
                 <div class="flex flex-col w-full">
                     <label for="destination" class="text-[16px] text-text font-medium">Varış noktası?</label>
@@ -255,8 +247,8 @@ $customersExperiences = [
                     <input id="checkout" class="w-ful border border-solid border-transparent border-b-black pb-[10px]" type="date">
                 </div>
             </div>
-            <button type="button" data-toggle data-target="#popupForm" class="h-full w-[230px] bg-primary rounded-r-[20px] flex items-center justify-center gap-[35px]">
-                <div class="text-white text-[36px]">Şimdi <br> Kirala</div>
+            <button type="button" data-toggle data-target="#popupForm" class="h-full w-[230px] min-lg:p-[10px] lg:w-full bg-primary rounded-r-[20px] lg:rounded-lg flex items-center justify-center gap-[35px]">
+                <div class="text-white text-2xl lg:[&_br]:hidden lg:p-[20px]">Şimdi <br> Kirala</div>
                 <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M27.7071 8.7071C28.0976 8.31658 28.0976 7.68342 27.7071 7.29289L21.3431 0.928931C20.9526 0.538406 20.3195 0.538407 19.9289 0.928931C19.5384 1.31946 19.5384 1.95262 19.9289 2.34314L25.5858 8L19.9289 13.6569C19.5384 14.0474 19.5384 14.6805 19.9289 15.0711C20.3195 15.4616 20.9526 15.4616 21.3431 15.0711L27.7071 8.7071ZM6.79955e-08 9L27 9L27 7L-6.79955e-08 7L6.79955e-08 9Z" fill="white" />
                 </svg>
@@ -270,32 +262,30 @@ $customersExperiences = [
         </form>
     </section>
     <!-- current works -->
-    <section class="w-full h-full pt-[140px] pl-[182px] relative">
+    <section class="w-full h-full pt-[140px] pl-[182px] lg:p-[50px_30px] relative">
         <!-- title and buttons -->
-        <div class="flex items-end justify-between pr-[182px] z-10">
-            <div class="flex flex-col">
-                <h2 class="text-[64px]">Güncel İşlerimiz</h2>
-                <div class="w-[365px] h-[4px] bg-primary"></div>
-                <p class="text-text text-[24px] pt-[32px]"><strong>Essa karavan</strong>’ın güncel işlerinden haberdar
-                    olun</p>
+        <div class="flex lg:flex-col lg:gap-[30px] lg:items-center lg:w-full items-end justify-between pr-[182px] z-10 lg:px-[30px]">
+            <div class="lg:w-full flex flex-col">
+                <h2 class="text-[64px] lg:text-center lg:text-3xl">Güncel İşlerimiz</h2>
+                <div class="w-[365px] lg:w-full h-[4px] lg:h-[2px] bg-primary"></div>
+                <p class="text-text text-[24px] lg:text-xl pt-[32px] lg:text-center"><strong>Essa karavan</strong>’ın güncel işlerinden haberdar olun</p>
             </div>
             <div class="flex items-center gap-[40px]">
-                <button class="worksAndInsta-prev w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center relative overflow-hidden
-                    before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] hover:before:w-full before:duration-450 before:z-0">
-                    <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
+                <button class="worksAndInsta-prev w-[60px] h-[60px] lg:w-[40px] lg:h-[40px] rounded-[12px] lg:rounded-lg bg-dark flex items-center justify-center relative overflow-hidden
+                    before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] lg:rounded-lg hover:before:w-full before:duration-450 before:z-0">
+                    <svg class="lg:scale-75 z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
                         <path d="M11 1L1 11L11 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <button class="worksAndInsta-next w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center relative overflow-hidden
-                    before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] hover:before:w-full before:duration-450 before:z-0">
-                    <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
+                <button class="worksAndInsta-next w-[60px] h-[60px] lg:w-[40px] lg:h-[40px] rounded-[12px] lg:rounded-lg bg-dark flex items-center justify-center relative overflow-hidden before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] lg:rounded-lg hover:before:w-full before:duration-450 before:z-0">
+                    <svg class="lg:scale-75 z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
                         <path d="M1 21L11 11L0.999999 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
             </div>
         </div>
         <!-- slider -->
-        <div class="worksAndInsta-slider swiper w-full !h-[660px] mt-[100px]">
+        <div class="worksAndInsta-slider swiper w-full !h-[660px] lg:!h-[300px] mt-[100px] lg:mt-[30px]">
             <div class="swiper-wrapper">
                 <?php foreach ($currentWorks as $key => $item) : ?>
                     <div class="swiper-slide w-full h-full rounded-[26px] pb-[40px] pl-[24px] flex items-end justify-start overflow-hidden relative group">
@@ -324,43 +314,43 @@ $customersExperiences = [
             </div>
         </div>
         <!-- bg line-->
-        <div class="w-full h-full absolute top-0 left-0 pointer-events-none z-[-1]">
+        <div class="lg:hidden w-full h-full absolute top-0 left-0 pointer-events-none z-[-1]">
             <img class="w-full h-full object-cover" src="../assets/image/static/vektor-current-works.png" alt="">
         </div>
     </section>
     <!-- services -->
-    <section class="w-full h-full pt-[280px] px-[182px] relative">
+    <section class="w-full h-full pt-[280px] lg:py-[50px] lg:px-[30px] px-[182px] relative">
         <!-- title -->
-        <div class="flex items-end justify-between pr-[182px] z-10">
+        <div class="flex items-end justify-between pr-[182px] lg:p-0 z-10">
             <div class="flex flex-col">
-                <h2 class="text-[64px]">Hizmetlerimiz</h2>
-                <div class="w-[365px] h-[4px] bg-primary"></div>
-                <p class="text-text text-[24px] pt-[32px]">
+                <h2 class="text-[64px] lg:text-3xl lg:text-center">Hizmetlerimiz</h2>
+                <div class="w-[365px] lg:w-full lg:h-[2px] h-[4px] bg-primary"></div>
+                <p class="lg:text-center text-text text-[24px] pt-[32px]">
                     <strong>Essa karavan</strong>’ın Size Özel Hizmetlerini keşfedin
                 </p>
             </div>
         </div>
         <!-- services -->
-        <div class="w-full h-[640px] mt-[100px] flex items-center justify-center gap-[32px] z-10">
+        <div class="w-full h-[640px] 2xl:h-auto mt-[100px] flex lg:flex-col items-center justify-center gap-[32px] z-10">
             <?php foreach ($services as $key => $item) : ?>
                 <div class="w-full h-full rounded-[26px] overflow-hidden bg-white shadow-2xl group">
                     <!-- image -->
-                    <div class="w-full h-[290px] overflow-hidden relative">
+                    <div class="w-full h-[290px] 2xl:h-[200px] overflow-hidden relative">
                         <img class="w-full h-full object-cover group-hover:scale-110 duration-450" src="<?= $item['img'] ?>" alt="">
                         <!-- text  -->
                         <div class="absolute w-[265px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-[10]">
-                            <h3 class="text-[48px] text-center font-black text-white"><?= $item['service'] ?></h3>
+                            <h3 class="text-[48px] 2xl:text-3xl text-center font-black text-white"><?= $item['service'] ?></h3>
                         </div>
                         <!-- bg -->
                         <div class="absolute top-0 left-0 w-full h-full bg-secondary/60"></div>
                     </div>
                     <!-- description -->
-                    <div class="py-[40px] px-[24px] flex flex-col gap-[24px]">
+                    <div class="py-[40px] px-[24px] flex flex-col lg:items-center gap-[24px]">
                         <h4 class="text-text text-[28px]"><?= $item['title'] ?></h4>
                         <p class="text-[16px] font-medium leading-[24px] line-clamp-5">
                             <?= $item['text'] ?>
                         </p>
-                        <button class="w-[180px] h-[64px] bg-primary rounded-[12px] text-white font-bold">
+                        <button class="w-[180px] h-[64px] bg-primary rounded-[12px] lg:rounded-lg text-white font-bold">
                             DETAYLAR
                         </button>
                     </div>
@@ -373,35 +363,35 @@ $customersExperiences = [
         </div>
     </section>
     <!-- about us -->
-    <section class="pt-[280px] pb-[140px] px-[182px] relative">
+    <section class="pt-[280px] pb-[140px] px-[182px] lg:p-[50px_30px] relative">
         <!-- title -->
         <div class="flex flex-col">
-            <h2 class="text-[64px]">Hakkımızda</h2>
-            <div class="w-[150px] h-[4px] bg-primary"></div>
-            <p class="text-text text-[24px] pt-[32px]">
+            <h2 class="text-[64px] lg:text-3xl lg:text-center">Hakkımızda</h2>
+            <div class="w-[150px] lg:w-full h-[4px] lg:h-[1px] bg-primary"></div>
+            <p class="text-text text-[24px] lg:text-xl lg:text-center pt-[32px]">
                 Konforlu Yolculuklar için <strong>Esstetik</strong> ve <strong>Sağlam</strong> Çözümler
             </p>
         </div>
         <!-- content -->
-        <div class="pt-[100px] grid grid-cols-[760px,1fr] gap-[80px] items-center">
-            <div class="overflow-hidden rounded-[26px] w-full h-[870px]">
+        <div class="pt-[100px] lg:pt-[30px] lg:flex lg:flex-col grid grid-cols-[760px,1fr] 3xl:grid-cols-[50%,50%] gap-[80px] items-center">
+            <div class="overflow-hidden rounded-[26px] w-full h-[870px] lg:h-[300px] 2xl:h-[650px]">
                 <video class="w-full h-full object-cover" width="320" height="240" autoplay muted>
                     <source src="../assets/image/trademark/about.mp4" type="video/mp4">
                 </video>
             </div>
             <div>
-                <h1 class="text-[54px] text-primary font-medium">Essa Karavan</h1>
-                <h3 class="text-[40px] pt-[50px] font-medium">
+                <h1 class="text-[54px] 3xl:text-4xl text-primary font-medium">Essa Karavan</h1>
+                <h3 class="text-[40px] 3xl:text-xl pt-[50px] font-medium">
                     Doğaya Uzanan Yolculuklarınızın <br>
                     En Güvenli Durağı
                 </h3>
-                <p class="text-[24px] text-text pt-[5px] font-medium leading-[52px]">
+                <p class="text-[24px] 3xl:text-lg text-text pt-[5px] font-medium leading-[52px]">
                     Essa Karavan, macera dolu yolculuklarınız için mükemmel bir ortak. İmalat, satış, kiralama ve yedek
                     parça satışı alanlarında uzmanlaşmış olan firmamız, karavan tutkunlarının hayallerini gerçeğe
                     dönüştürüyor. Her adımda kaliteye ve güvenliğe odaklanarak, Essa Karavan, sizin rüyalarınızı ve
                     doğaya uzanan özgür ruhunuzu desteklemek için burada.
                 </p>
-                <a href="" class="flex items-center gap-[20px] text-primary text-[24px] pt-[24px]">
+                <a href="" class="flex items-center gap-[20px] text-primary text-[24px] 3xl:!text-lg pt-[24px]">
                     <span>Devamını Oku</span>
                     <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.7071 8.7071C28.0976 8.31658 28.0976 7.68342 27.7071 7.29289L21.3431 0.92893C20.9526 0.538406 20.3195 0.538406 19.9289 0.92893C19.5384 1.31945 19.5384 1.95262 19.9289 2.34314L25.5858 8L19.9289 13.6569C19.5384 14.0474 19.5384 14.6805 19.9289 15.0711C20.3195 15.4616 20.9526 15.4616 21.3431 15.0711L27.7071 8.7071ZM8.74228e-08 9L27 9L27 7L-8.74228e-08 7L8.74228e-08 9Z" fill="#FF7757" />
@@ -410,35 +400,34 @@ $customersExperiences = [
             </div>
         </div>
         <!-- bg line-->
-        <div class="w-full h-full absolute top-0 left-0 pointer-events-none z-[-1]">
+        <div class="lg:hidden w-full h-full absolute top-0 left-0 pointer-events-none z-[-1]">
             <img class="w-full h-full object-cover" src="../assets/image/static/vektor-current-works.png" alt="">
         </div>
     </section>
     <!-- instagram -->
-    <section class="w-full h-full pl-[182px] bg-[#33403380] relative">
-        <div class="flex items-center gap-[100px]">
+    <section class="w-full h-full pl-[182px] lg:p-[50px_30px] bg-[#33403380] relative">
+        <div class="flex lg:flex-col items-center gap-[100px] 2xl:gap-[50px] lg:gap-[30px]">
             <!-- title -->
             <div class="flex flex-col">
-                <h2 class="text-[64px] text-white">
-                    İnstagram <br>
-                    Gönderilerimiz
+                <h2 class="text-[64px] 2xl:text-5xl lg:text-2xl lg:text-center lg:[&_br]:hidden text-white">
+                    İnstagram <br> Gönderilerimiz
                 </h2>
-                <div class="w-[230px] h-[4px] bg-primary"></div>
-                <p class="text-[18px] pt-[32px] text-white">
+                <div class="w-[230px] lg:w-full lg:h-[2px] h-[4px] bg-primary"></div>
+                <p class="text-[18px] lg:text-lg lg:text-center pt-[32px] text-white">
                     <strong>Essa karavan</strong>’ın instagram gönderilerini kaçırmamak <br>
                     için takipte kalın.
                 </p>
-                <a href="https://www.instagram.com/essakaravan/" target="_blank" class="w-[205px] h-[60px] bg-primary rounded-[12px] mt-[62px] flex items-center justify-center text-white text-[18px] relative
-                    before:absolute before:top-[-13px] before:left-[-16px] before:w-[43px] before:h-[43px] before:bg-[#172432] before:rounded-[12px] before:z-[-1]
-                    after:absolute after:bottom-[-13px] after:right-[-16px] after:w-[43px] after:h-[43px] after:bg-[#7f8991] after:rounded-[12px] after:z-[-1]">
+                <a href="https://www.instagram.com/essakaravan/" target="_blank" class="w-[205px] h-[60px] lg:w-auto lg:h-auto lg:p-[10px_20px] bg-primary rounded-[12px] lg:rounded-lg mt-[62px] flex items-center justify-center text-white text-[18px] relative
+                    before:absolute before:top-[-13px] before:left-[-16px] before:w-[43px] before:h-[43px] before:bg-[#172432] before:rounded-[12px] lg:rounded-lg before:z-[-1]
+                    after:absolute after:bottom-[-13px] after:right-[-16px] after:w-[43px] after:h-[43px] after:bg-[#7f8991] after:rounded-[12px] lg:rounded-lg after:z-[-1]">
                     Tüm Gönderileri gör
                 </a>
             </div>
             <!-- slider -->
-            <div class="worksAndInsta-slider swiper w-full h-full py-[190px]">
+            <div class="worksAndInsta-slider swiper w-full h-full lg:h-[400px] lg:!p-0 py-[190px]">
                 <div class="swiper-wrapper">
                     <?php foreach ($instagram as $key => $item) : ?>
-                        <div class="swiper-slide !h-[400px] [&.swiper-slide-next]:-translate-y-[56px] w-full rounded-[26px] pb-[40px] pl-[24px] flex items-end justify-start overflow-hidden relative duration-450 transition-all shadow-xl group">
+                        <div class="swiper-slide !h-[400px] lg:!h-auto [&.swiper-slide-next]:-translate-y-[56px] w-full rounded-[26px] pb-[40px] pl-[24px] flex items-end justify-start overflow-hidden relative duration-450 transition-all shadow-xl group">
                             <a href="<?= $item['img'] ?>" data-fancybox="galley" class="absolute top-0 left-0 w-full h-full group-hover:scale-110 duration-450">
                                 <img class="w-full h-full object-cover" src="<?= $item['img'] ?>" alt="">
                             </a>
@@ -449,21 +438,21 @@ $customersExperiences = [
         </div>
     </section>
     <!-- customers gallery  -->
-    <section class="py-[140px] px-[182px]">
+    <section class="py-[140px] px-[182px] lg:p-[50px_30px]">
         <!-- title -->
         <div class="flex flex-col">
-            <h2 class="text-[64px]">Galeri</h2>
-            <div class="w-[283px] h-[4px] bg-primary"></div>
-            <p class="text-text text-[24px] pt-[32px]">
+            <h2 class="text-[64px] lg:text-3xl lg:text-center">Galeri</h2>
+            <div class="w-[283px] lg:w-full h-[4px] lg:h-[2px] bg-primary"></div>
+            <p class="text-text text-[24px] pt-[32px] lg:text-lg lg:text-center">
                 Müşterilerimizden gelen fotoğraf galerimiz
             </p>
         </div>
         <!-- slider -->
-        <div class="swiper gallery-slider h-full pt-[140px] w-full">
-            <div class="swiper-wrapper ![-webkit-transition-timing-function:linear] ![-o-transition-timing-function:linear] ![transition-timing-function:linear]">
+        <div class="swiper gallery-slider h-full pt-[140px] lg:pt-[30px] w-full">
+            <div class="swiper-wrapper min-lg:![-webkit-transition-timing-function:linear] min-lg:![-o-transition-timing-function:linear] min-lg:![transition-timing-function:linear]">
                 <?php foreach ($gallery as $key => $item) : ?>
-                    <a href="<?= $item['img'] ?>" data-fancybox="gallery-2" class="swiper-slide w-full h-[570px] overflow-hidden rounded-[26px]
-                                [&.swiper-slide-active]:-translate-y-[40px] [&.swiper-slide-next_+_.swiper-slide]:-translate-y-[40px] duration-1000 transition-all">
+                    <a href="<?= $item['img'] ?>" data-fancybox="gallery-2" class="swiper-slide w-full h-[570px] lg:h-[300px] overflow-hidden rounded-[26px]
+                                min-lg:[&.swiper-slide-active]:-translate-y-[40px] min-lg:[&.swiper-slide-next_+_.swiper-slide]:-translate-y-[40px] min-lg:duration-1000 min-lg:transition-all">
                         <img class="w-full h-full object-cover" src="<?= $item['img'] ?>" alt="">
                     </a>
                 <?php endforeach; ?>
@@ -471,21 +460,21 @@ $customersExperiences = [
         </div>
     </section>
     <!-- customers experiences -->
-    <section class="pt-[140px] pb-[280px] pl-[182px]">
+    <section class="pt-[140px] pb-[280px] pl-[182px] lg:p-[50px_30px]">
         <!-- title -->
         <div class="flex flex-col">
-            <h2 class="text-[64px]">Müşteri Deneyimleri</h2>
-            <div class="w-[347px] h-[4px] bg-primary"></div>
-            <p class="text-text text-[24px] pt-[32px]">
+            <h2 class="text-[64px] lg:text-center lg:text-3xl">Müşteri Deneyimleri</h2>
+            <div class="w-[347px] lg:w-full h-[4px] lg:h-[2px] bg-primary"></div>
+            <p class="text-text text-[24px] lg:text-lg lg:text-center pt-[32px]">
                 Müşterilerimizden gelen bazı harika geri bildirimler
             </p>
         </div>
         <!-- swiper  -->
-        <div class="swiper customersExperiences-slider pt-[160px]">
+        <div class="swiper customersExperiences-slider pt-[160px] lg:pt-[100px]">
             <div class="swiper-wrapper">
                 <?php foreach ($customersExperiences as $key => $item) : ?>
                     <div class="swiper-slide">
-                        <div class="w-full h-full px-[40px] pt-[60px] pb-[40px] rounded-[12px] bg-[#F5F6F7] relative">
+                        <div class="w-full h-full px-[40px] pt-[60px] pb-[40px] rounded-[12px] lg:rounded-lg bg-[#F5F6F7] relative">
                             <img class="rounded-full w-[100px] h-[100px] absolute top-[-60px] left-[40px]" src="<?= $item['img'] ?>" alt="">
                             <div class="flex flex-col gap-[20px]">
                                 <!-- text -->
@@ -507,15 +496,15 @@ $customersExperiences = [
             </div>
         </div>
         <!-- buttons -->
-        <div class="w-full flex items-center justify-end  gap-[40px] pt-[100px] pr-[182px]">
-            <button class="customersExperiences-prev w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center relative overflow-hidden
-                    before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] hover:before:w-full before:duration-450 before:z-0">
+        <div class="w-full flex items-center justify-end lg:justify-center gap-[40px] pt-[100px] lg:p-[30px] pr-[182px]">
+            <button class="customersExperiences-prev w-[60px] h-[60px] lg:w-[40px] lg:h-[40px] rounded-[12px] lg:rounded-lg bg-dark flex items-center justify-center relative overflow-hidden
+                    before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] lg:rounded-lg hover:before:w-full before:duration-450 before:z-0">
                 <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
                     <path d="M11 1L1 11L11 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
-            <button class="customersExperiences-next w-[60px] h-[60px] rounded-[12px] bg-dark flex items-center justify-center relative overflow-hidden
-                    before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] hover:before:w-full before:duration-450 before:z-0">
+            <button class="customersExperiences-next w-[60px] h-[60px] lg:w-[40px] lg:h-[40px] rounded-[12px] lg:rounded-lg bg-dark flex items-center justify-center relative overflow-hidden
+                    before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-primary before:rounded-[12px] lg:rounded-lg hover:before:w-full before:duration-450 before:z-0">
                 <svg class="z-10" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
                     <path d="M1 21L11 11L0.999999 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>

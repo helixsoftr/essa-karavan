@@ -4,12 +4,14 @@ module.exports = {
     content: ["./dev/**/*.js", "./views/**/*.php", "./dev/**/*.css"],
     theme: {
         screens: {
+            "min-3xl": { min: "1881px" },
             "min-2xl": { min: "1681px" },
             "min-xl": { min: "1441px" },
             "min-lg": { min: "1281px" },
             "min-md": { min: "1025px" },
             "min-sm": { min: "769px" },
             "min-xs": { min: "481px" },
+            "3xl": { max: "1880px" },
             "2xl": { max: "1680px" },
             xl: { max: "1440px" },
             lg: { max: "1280px" },
@@ -21,6 +23,7 @@ module.exports = {
         },
         fontFamily: {
             sans: ["Raleway", "sans-serif"],
+            serif: ["Times New Roman", "sans-serif"],
         },
         colors: {
             emerald: null,
@@ -225,6 +228,10 @@ module.exports = {
                     from: {},
                     to: { transform: "translate(0) skew(0) rotate(0)" },
                 },
+                grow: {
+                    from: { transform: "scale(1)", opacity: 1 },
+                    to: { transform: "scale(2)", opacity: 0 },
+                },
                 revealReverse: {
                     from: { transform: "translate(0) skew(0) rotate(0)" },
                     to: {},
@@ -241,6 +248,7 @@ module.exports = {
                 },
             },
             animation: {
+                grow: "grow 3s linear infinite",
                 dash: "dash 3s linear infinite alternate",
                 reveal: "reveal forwards .5s",
                 revealReverse: "revealReverse forwards .5s",
