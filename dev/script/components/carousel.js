@@ -51,7 +51,6 @@ if (document.querySelector(".hero-slider")) {
         },
     });
 }
-
 // ========================================================================================
 // CURRENT WORKS & INSTAGRAM
 // ========================================================================================
@@ -80,11 +79,10 @@ if (document.querySelector(".worksAndInsta-slider")) {
             },
             1680: {
                 slidesPerView: 3.5,
-            }
-        }
+            },
+        },
     });
 }
-
 // ========================================================================================
 //  GALLERY
 // ========================================================================================
@@ -93,7 +91,7 @@ if (document.querySelector(".gallery-slider")) {
         modules: [A, P, N, Px, EC, T],
         slidesPerView: 1,
         spaceBetween: 32,
-        speed: 1000,
+        speed: 3000,
         watchSlidesProgress: true,
         parallax: true,
         loop: true,
@@ -105,18 +103,41 @@ if (document.querySelector(".gallery-slider")) {
                 slidesPerView: 3,
             },
             1680: {
-                speed: 4000,
                 slidesPerView: 4,
-                autoplay: {
-                    delay: 0.8,
-                    disableOnInteraction: true,
-                    pauseOnMouseEnter: false,
-                },
-            }
-        }
+
+            },
+        },
+        autoplay: {
+            delay: 0.8,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: false,
+        },
     });
 }
 
+// if (document.querySelector(".trademarks-swiper")) {
+//         speed: 3000,
+//         watchSlidesProgress: true,
+//         parallax: true,
+//         loop: true,
+//         direction: "horizontal",
+//         allowTouchMove: true,
+//         freeMode: true,
+//         breakpoints: {
+//             1441: {
+//                 slidesPerView: 5,
+//             },
+//             1025: {
+//                 slidesPerView: 4,
+//             },
+//         },
+//         autoplay: {
+//             delay: 0.8,
+//             disableOnInteraction: true,
+//             pauseOnMouseEnter: true,
+//         },
+//     });
+// }
 // ========================================================================================
 //  CUSTOMERS EXPERİENCES
 // ========================================================================================
@@ -142,7 +163,8 @@ if (document.querySelector(".customersExperiences-slider")) {
         breakpoints: {
             1280: {
                 slidesPerView: 2.5,
-            }
-        }
+            },
+        },
     });
 }
+

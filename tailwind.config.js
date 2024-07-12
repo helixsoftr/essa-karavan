@@ -25,37 +25,12 @@ module.exports = {
             sans: ["Raleway", "sans-serif"],
             serif: ["Times New Roman", "sans-serif"],
         },
-        colors: {
-            emerald: null,
-            indigo: null,
-            yellow: null,
-            amber: null,
-            red: null,
-            orange: null,
-            lime: null,
-            green: null,
-            teal: null,
-            sky: null,
-            cyan: null,
-            blue: null,
-            violet: null,
-            purple: null,
-            fuchsia: null,
-            pink: null,
-            slate: null,
-            gray: null,
-            zinc: null,
-            neutral: null,
-            stone: null,
-            rose: null,
-        },
         extend: {
             colors: {
                 transparent: "transparent",
-                current: "currentColor",
                 bodyBackgroundColor: "#fefefe",
-                white: "#ffffff",
-                black: "#000000",
+                white: "#fff",
+                black: "#000",
                 dark: "#43484C",
                 text: "#767E86",
                 primary: {
@@ -73,11 +48,6 @@ module.exports = {
                     950: "#481307",
                 },
                 secondary: "#334033",
-                red: {
-                    400: "#ef4950",
-                    500: "#eb1c24",
-                    600: "#bc161d",
-                },
             },
             opacity: {
                 1: "0.01",
@@ -288,3 +258,4 @@ module.exports = {
         require("tailwind-scrollbar")({ nocompatible: true }),
     ],
 };
+

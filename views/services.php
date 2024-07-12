@@ -2,13 +2,16 @@
 <?php include 'layout/header.php'; ?>
 
 <main class="min-h-screen">
-    <section class="relative z-0 w-screen h-[60svh] lg:h-auto">
+    <section class="relative z-0 h-[60svh] lg:h-auto max-w-[1920px] mx-auto w-full">
         <div class="relative w-full h-full lg:py-[30px]">
-            <img class="lg:absolute lg:z-[-1] lg:top-0 lg:left-0 w-full h-full object-cover object-center" src="../assets/image/banner-bg.png" alt="banner">
-            <div data-navbarSpaceFix="padding" class="lg:w-full absolute lg:static top-0 left-0 w-full h-full flex lg:flex-col items-center justify-between px-[180px] lg:px-[30px]">
+            <img class="lg:absolute lg:z-[-1] lg:top-0 lg:left-0 w-full h-full object-cover object-center"
+                src="../assets/image/banner-bg.png" alt="banner">
+            <div data-navbarSpaceFix="padding"
+                class="lg:w-full absolute lg:static top-0 left-0 w-full h-full flex lg:flex-col items-center justify-between px-[180px] lg:px-[30px]">
                 <div class="flex flex-col gap-[30px]">
                     <h1 class="text-white font-medium text-6xl lg:text-3xl lg:text-center">Hizmetlerimiz</h1>
-                    <ul class="flex gap-[10px] text-lg tracking-[4.5] text-white/50 [&>li>a:hover]:text-white [&>li>a]:duration-450 [&>li:last-of-type] [&>li:last-of-type]:after:hidden [&>li]:flex [&>li]:after:ml-[10px] [&>li]:after:block [&>li]:after:content-['/']">
+                    <ul
+                        class="flex gap-[10px] text-lg tracking-[4.5] text-white/50 [&>li>a:hover]:text-white [&>li>a]:duration-450 [&>li:last-of-type] [&>li:last-of-type]:after:hidden [&>li]:flex [&>li]:after:ml-[10px] [&>li]:after:block [&>li]:after:content-['/']">
                         <li>
                             <a href="#">
                                 Anasayfa
@@ -24,169 +27,150 @@
             </div>
         </div>
     </section>
-    <section class="relative z-0 w-screen overflow-hidden py-[50px] pb-[100px]">
-        <div class="lg:hidden w-full h-full absolute z-[-1] top-0 left-0 pointer-events-none z-[-1]">
-            <img class="w-full h-full object-cover object-center" src="../assets/image/static/vektor-current-works.png" alt="">
+
+    <section class="relative z-0 w-screen overflow-hidden min-lg:pt-[50px]">
+        <div class="lg:hidden w-full h-full absolute top-0 left-0 pointer-events-none z-[-1]">
+            <img class="w-full h-full object-cover object-center" src="../assets/image/static/vektor-current-works.png"
+                alt="">
         </div>
-        <div class="flex flex-col items-center gap-[50px] py-[100px] px-[180px]">
-            <h1 class="mb-[50px] text-[54px] font-serif text-primary">Essa Karavan</h1>
-            <h3 class="text-[40px] font-serif">Doğaya Uzanan Yolculuklarınızın En Güvenli Durağı</h3>
-            <p class="text-2xl">Essa Karavan, macera dolu yolculuklarınız için mükemmel bir ortak. İmalat, satış, kiralama ve yedek parça satışı alanlarında uzmanlaşmış olan firmamız, karavan tutkunlarının hayallerini gerçeğe dönüştürüyor. Her adımda kaliteye ve güvenliğe odaklanarak, Essa Karavan, sizin rüyalarınızı ve doğaya uzanan özgür ruhunuzu desteklemek için burada.</p>
+        <div
+            class="flex flex-col items-center gap-[50px] py-[100px] px-[180px] xl:xp-[100px] lg:px-[30px] lg:gap-[20px] lg:pb-0 lg:pt-[50px]">
+            <h1 class="text-[54px] font-serif text-primary lg:text-[36px]">Essa Karavan</h1>
+            <h3 class="text-[40px] font-serif lg:text-[20px] text-center">Doğaya Uzanan Yolculuklarınızın En Güvenli
+                Durağı</h3>
+            <p class="text-2xl text-center lg:text-[16px]">
+                Essa Karavan, macera dolu yolculuklarınız için mükemmel bir ortak. İmalat, satış,
+                kiralama ve yedek parça satışı alanlarında uzmanlaşmış olan firmamız, karavan tutkunlarının hayallerini
+                gerçeğe dönüştürüyor. Her adımda kaliteye ve güvenliğe odaklanarak, Essa Karavan, sizin rüyalarınızı ve
+                doğaya uzanan özgür ruhunuzu desteklemek için burada.
+            </p>
         </div>
     </section>
-    <?php
-    $services = [
-        [
-            'id' => 'build',
-            'name' => 'İmalat',
-            'title' => 'Karavan İmalat Hizmeti',
-            'desc' => 'Essa Karavan olarak, imalat hizmetimizde öncelikli olarak kaliteye ve estetiğe odaklanıyoruz. Her bir karavanımız, titizlikle seçilmiş malzemeler ve ustaca işçilikle tasarlanarak, müşterilerimize konforlu ve güvenli bir yolculuk deneyimi sunmak için özenle hazırlanıyor.',
-            'button' => 'Şimdi Sipariş Et',
-            'images' => [
-                '../assets/image/trademark/hero-slider.png',
-                '../assets/image/trademark/hero-slider.png',
-                '../assets/image/trademark/hero-slider.png',
-                '../assets/image/trademark/hero-slider.png',
-            ]
-        ],
-        [
-            'id' => 'renting',
-            'name' => 'Kiralama',
-            'title' => 'Karavan Kiralama Hizmeti',
-            'desc' => 'Essa Karavan olarak, imalat hizmetimizde öncelikli olarak kaliteye ve estetiğe odaklanıyoruz. Her bir karavanımız, titizlikle seçilmiş malzemeler ve ustaca işçilikle tasarlanarak, müşterilerimize konforlu ve güvenli bir yolculuk deneyimi sunmak için özenle hazırlanıyor.',
-            'button' => 'Şimdi Kirala',
-            'images' => [
-                '../assets/image/trademark/hero-slider.png',
-                '../assets/image/trademark/hero-slider.png',
-                '../assets/image/trademark/hero-slider.png',
-                '../assets/image/trademark/hero-slider.png',
-            ]
-        ],
-        [
-            'id' => 'repair',
-            'name' => 'Tadilat',
-            'title' => 'Karavan Tadilat Hizmeti',
-            'desc' => 'Essa Karavan olarak, imalat hizmetimizde öncelikli olarak kaliteye ve estetiğe odaklanıyoruz. Her bir karavanımız, titizlikle seçilmiş malzemeler ve ustaca işçilikle tasarlanarak, müşterilerimize konforlu ve güvenli bir yolculuk deneyimi sunmak için özenle hazırlanıyor.',
-            'button' => 'Şimdi Randevu Al',
-            'images' => [
-                '../assets/image/trademark/hero-slider.png',
-                '../assets/image/trademark/hero-slider.png',
-                '../assets/image/trademark/hero-slider.png',
-                '../assets/image/trademark/hero-slider.png',
-            ]
-        ],
-    ]
-    ?>
-    <section class="relative w-screen overflow-hidden">
-        <div class="grid grid-cols-[780px,140px,1fr]">
-            <?php foreach ($services as $each) : ?>
-                <div class="<?= $each['id'] ?> !absolute !opacity-0 !pointer-events-none [&.active]:!relative [&.active]:!opacity-100 [&.active]:!pointer-events-auto swiper swiperServicesMain w-full h-full">
-                    <div class="swiper-wrapper">
-                        <?php foreach ($each['images'] as $image) : ?>
-                            <div class="swiper-slide">
-                                <img class="w-full" src="<?= $image ?>" alt="">
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-            <div class="w-full h-[calc(100%-150px)] bg-red-400 flex flex-col items-center justify-end gap-[30px] p-[50px]">
-                <button class="swiper-button-left rotate-180">
-                    <svg width="59" height="17" viewBox="0 0 59 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.027832 8.42695H57.0477M57.0477 8.42695L49.4578 1M57.0477 8.42695L49.4578 15.8539" stroke="white" stroke-width="2.5" />
-                    </svg>
-                </button>
-                <button class="swiper-button-right">
-                    <svg width="59" height="17" viewBox="0 0 59 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.027832 8.42695H57.0477M57.0477 8.42695L49.4578 1M57.0477 8.42695L49.4578 15.8539" stroke="white" stroke-width="2.5" />
-                    </svg>
-                </button>
-            </div>
-            <div class="relative w-full flex flex-col gap-[50px] overflow-hidden before:absolute before:z-[-1] before:top-0 before:left-0 before:w-full before:h-[calc(100%-150px)] before:bg-red-400">
-                <div class="flex justify-between">
-                    <h1>Hizmetlerimiz</h1>
-                    <?php foreach ($services as $key => $each) : ?>
-                        <button <?= ($key == 0 ? 'data-default' : '') ?> data-toggle data-target=".<?= $each['id'] ?>"><?= $each['name'] ?></button>
-                    <?php endforeach; ?>
-                </div>
-                <?php foreach ($services as $each) : ?>
-                    <div <?= $each['id'] ?> class="!absolute !opacity-0 !pointer-events-none [&.active]:!relative [&.active]:!opacity-100 [&.active]:!pointer-events-auto flex flex-col">
-                        <h2>
-                            <?= $each['title'] ?>
-                        </h2>
+
+    <section class="px-[200px] 2xl:px-[150px] xl:px-[100px] lg:px-[30px] pb-[180px] lg:py-[50px]">
+        <div class="pt-[80px] flex gap-[28px] h-[600px]
+            lg:flex-col lg:h-full lg:pt-[30px] lg:gap-[20px]">
+
+            <div data-hover-control class="active min-lg:basis-1/6 h-full w-full rounded-[21px] 
+                min-lg:[&.active]:basis-4/6 
+                before:absolute before:bottom-0 before:left-0 min-lg:before:w-full min-lg:before:h-full before:bg-[linear-gradient(180deg,rgba(255,255,255,0.65)_0%,#FFF_44.28%)] before:opacity-90 before:z-[10]
+                [&.active]:before:h-0 before:duration-700
+                 relative overflow-hidden cursor-pointer
+                 lg:h-[330px]
+                 duration-700 group">
+                <!-- content -->
+                <div class="pb-[50px] px-[50px] w-full h-full flex items-end relative z-10
+                        min-lg:translate-y-[200%] min-lg:opacity-0 group-[&.active]:translate-y-0 group-[&.active]:opacity-100 group-[&.active]:delay-200 
+                        lg:px-[30px] lg:py-[30px] lg:items-center lg:justify-center
+                        duration-750">
+                    <div
+                        class="flex flex-col gap-[20px] [&_:is(h1,h2,h3,h4,h5,h6,p)]:text-white [&_:is(h1,h2,h3,h4)]:font-bold [&_:is(h1,h2,h3,h4,h5)]:text-[48px]
+                           [&_:is(h6,p)]:text-[20px] [&_:is(h6,p)]:leading-[30px]
+                           lg:[&_:is(h1,h2,h3,h4,h5)]:text-[26px]  lg:[&_:is(h1,h2,h3,h4,h5)]:pb-[20px] lg:[&_:is(h6,p)]:text-[18px] lg:[&_:is(h6,p)]:text-white/80">
+                        <h3>Karavan İmalatı</h3>
                         <p>
-                            <?= $each['desc'] ?>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, saepe mollitia. Nobis,
+                            quasi. Sunt nemo illum maiores libero asperiores quos.
                         </p>
-                        <a class="relative z-[1] before:absolute before:z-[-1] before:top-[-15px] before:left-[-15px] before:w-[30px] before:h-[30px] before:bg-[#172432] before:rounded-lg after:absolute after:z-[-1] after:bottom-[-15px] after:right-[-15px] after:w-[30px] after:h-[30px] after:bg-[#767E86] after:rounded-lg" href="#">
-                            <div class="flex items-center gap-[10px] p-[10px_20px] rounded-xl bg-primary">
-                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_36_172)">
-                                        <path d="M0.708252 4.25008V15.5834L5.66659 12.7501L11.3333 15.5834L16.2916 12.7501V1.41675L11.3333 4.25008L5.66659 1.41675L0.708252 4.25008Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M5.66675 1.41675V12.7501" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M11.3333 4.25V15.5833" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_36_172">
-                                            <rect width="17" height="17" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <span>
-                                    <?= $each['button'] ?>
-                                </span>
-                            </div>
+                        <a href="#"
+                            class="w-[135px] h-[64px] lg:w-auto lg:h-auto lg:p-[10px_20px] lg:mt-auto rounded-[12px] bg-primary  flex items-center justify-center relative duration-450 before:absolute before:w-0 before:h-0 before:bg-primary/80 before:rounded-[12px] before:z-[-1] before:duration-450 hover:before:w-[110%] hover:before:h-[120%]">
+                            <p class="text-[20px] text-white lg:text-primary font-normal">Teklif Al</p>
                         </a>
                     </div>
-                <?php endforeach; ?>
-                <?php foreach ($services as $each) : ?>
-                    <div <?= $each['id'] ?> class="!absolute !opacity-0 !pointer-events-none [&.active]:!relative [&.active]:!opacity-100 [&.active]:!pointer-events-auto swiper swiperServicesSide w-full">
-                        <div class="swiper-wrapper">
-                            <?php foreach ($each['images'] as $image) : ?>
-                                <div class="swiper-slide">
-                                    <img class="w-full" src="<?= $image ?>" alt="">
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
+                </div>
+                <div
+                    class="lg:hidden absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-[11] group-[&.active]:opacity-0 duration-450">
+                    <p class="[writing-mode:vertical-lr] rotate-180 text-[42px] text-[#86888A] font-medium">Karavan
+                        İmalatı</p>
+                </div>
+                <!-- bg img -->
+                <div
+                    class="absolute top-0 left-0 w-full h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full min-lg:before:bg-[linear-gradient(0deg,rgba(0,0,0,0.79)_0%,rgba(0,0,0,0.00)_87.89%)] lg:before:bg-black/60 before:pointer-events-none z-0">
+                    <img class="w-full h-full object-cover" src="../assets/image/trademark/hero-slider-2.jpg" alt="">
+                </div>
             </div>
+
+            <div data-hover-control class="min-lg:basis-1/6 h-full w-full rounded-[21px] 
+                min-lg:[&.active]:basis-4/6 
+                before:absolute before:bottom-0 before:left-0 min-lg:before:w-full min-lg:before:h-full before:bg-[linear-gradient(180deg,rgba(255,255,255,0.65)_0%,#FFF_44.28%)] before:opacity-90 before:z-[10]
+                [&.active]:before:h-0 before:duration-700
+                 relative overflow-hidden cursor-pointer
+                 lg:h-[330px]
+                 duration-700 group">
+                <!-- content -->
+                <div class="pb-[50px] px-[50px] w-full h-full flex items-end relative z-10
+                        min-lg:translate-y-[200%] min-lg:opacity-0 group-[&.active]:translate-y-0 group-[&.active]:opacity-100 group-[&.active]:delay-200 
+                        lg:px-[30px] lg:py-[30px] lg:items-center lg:justify-center
+                        duration-750">
+                    <div
+                        class="flex flex-col gap-[20px] [&_:is(h1,h2,h3,h4,h5,h6,p)]:text-white [&_:is(h1,h2,h3,h4)]:font-bold [&_:is(h1,h2,h3,h4,h5)]:text-[48px]
+                           [&_:is(h6,p)]:text-[20px] [&_:is(h6,p)]:leading-[30px]
+                           lg:[&_:is(h1,h2,h3,h4,h5)]:text-[26px]  lg:[&_:is(h1,h2,h3,h4,h5)]:pb-[20px] lg:[&_:is(h6,p)]:text-[18px] lg:[&_:is(h6,p)]:text-white/80">
+                        <h3>Karavan Kiralama</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, saepe mollitia. Nobis,
+                            quasi. Sunt nemo illum maiores libero asperiores quos.
+                        </p>
+                        <a href="#"
+                            class="w-[135px] h-[64px] lg:w-auto lg:h-auto lg:p-[10px_20px] lg:mt-auto rounded-[12px] bg-primary  flex items-center justify-center relative duration-450 before:absolute before:w-0 before:h-0 before:bg-primary/80 before:rounded-[12px] before:z-[-1] before:duration-450 hover:before:w-[110%] hover:before:h-[120%]">
+                            <p class="text-[20px] text-white lg:text-primary font-normal">Teklif Al</p>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="lg:hidden absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-[11] group-[&.active]:opacity-0 duration-450">
+                    <p class="[writing-mode:vertical-lr] rotate-180 text-[42px] text-[#86888A] font-medium">Karavan
+                        Kiralama</p>
+                </div>
+                <!-- bg img -->
+                <div
+                    class="absolute top-0 left-0 w-full h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full min-lg:before:bg-[linear-gradient(0deg,rgba(0,0,0,0.79)_0%,rgba(0,0,0,0.00)_87.89%)] lg:before:bg-black/60 before:pointer-events-none z-0">
+                    <img class="w-full h-full object-cover" src="../assets/image/trademark/hero-slider-3.jpg" alt="">
+                </div>
+            </div>
+
+            <div data-hover-control class="min-lg:basis-1/6 h-full w-full rounded-[21px] 
+                min-lg:[&.active]:basis-4/6 
+                before:absolute before:bottom-0 before:left-0 min-lg:before:w-full min-lg:before:h-full before:bg-[linear-gradient(180deg,rgba(255,255,255,0.65)_0%,#FFF_44.28%)] before:opacity-90 before:z-[10]
+                [&.active]:before:h-0 before:duration-700
+                 relative overflow-hidden cursor-pointer
+                 lg:h-[330px]
+                 duration-700 group">
+                <!-- content -->
+                <div class="pb-[50px] px-[50px] w-full h-full flex items-end relative z-10
+                        min-lg:translate-y-[200%] min-lg:opacity-0 group-[&.active]:translate-y-0 group-[&.active]:opacity-100 group-[&.active]:delay-200 
+                        lg:px-[30px] lg:py-[30px] lg:items-center lg:justify-center
+                        duration-750">
+                    <div
+                        class="flex flex-col gap-[20px] [&_:is(h1,h2,h3,h4,h5,h6,p)]:text-white [&_:is(h1,h2,h3,h4)]:font-bold [&_:is(h1,h2,h3,h4,h5)]:text-[48px]
+                           [&_:is(h6,p)]:text-[20px] [&_:is(h6,p)]:leading-[30px]
+                           lg:[&_:is(h1,h2,h3,h4,h5)]:text-[26px]  lg:[&_:is(h1,h2,h3,h4,h5)]:pb-[20px] lg:[&_:is(h6,p)]:text-[18px] lg:[&_:is(h6,p)]:text-white/80">
+                        <h3>Karavan Satışı</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, saepe mollitia. Nobis,
+                            quasi. Sunt nemo illum maiores libero asperiores quos.
+                        </p>
+                        <a href="#"
+                            class="w-[135px] h-[64px] lg:w-auto lg:h-auto lg:p-[10px_20px] lg:mt-auto rounded-[12px] bg-primary  flex items-center justify-center relative duration-450 before:absolute before:w-0 before:h-0 before:bg-primary/80 before:rounded-[12px] before:z-[-1] before:duration-450 hover:before:w-[110%] hover:before:h-[120%]">
+                            <p class="text-[20px] text-white lg:text-primary font-normal">Teklif Al</p>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="lg:hidden absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-[11] group-[&.active]:opacity-0 duration-450">
+                    <p class="[writing-mode:vertical-lr] rotate-180 text-[42px] text-[#86888A] font-medium">karavan
+                        Satışı
+                    </p>
+                </div>
+                <!-- bg img -->
+                <div
+                    class="absolute top-0 left-0 w-full h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full min-lg:before:bg-[linear-gradient(0deg,rgba(0,0,0,0.79)_0%,rgba(0,0,0,0.00)_87.89%)] lg:before:bg-black/60 before:pointer-events-none z-0">
+                    <img class="w-full h-full object-cover" src="../assets/image/trademark/hero-slider-3.jpg" alt="">
+                </div>
+            </div>
+
         </div>
     </section>
 </main>
 
 <?php include 'layout/footer.php'; ?>
-
-<script>
-    let swiperMain = document.querySelectorAll('.swiperServicesMain')
-    let side = document.querySelectorAll('.swiperServicesSide')
-
-    swiperMain.forEach((sm, i) => {
-        let swiperServicesMain = new Swiper(sm, {
-            modules: [A, P, N, Px, EC, T],
-            slidesPerView: 1,
-            speed: 1000,
-            spaceBetween: 10,
-            parallax: true,
-            allowTouchMove: false,
-            navigation: {
-                nextEl: ".swiper-button-right",
-                prevEl: ".swiper-button-left",
-            },
-        })
-
-        let swiperServicesSide = new Swiper('.swiperServicesSide', {
-            modules: [A, P, N, Px, EC, T],
-            slidesPerView: 2.4,
-            speed: 1000,
-            spaceBetween: 10,
-            parallax: true,
-            allowTouchMove: false,
-        })
-
-        swiperServicesMain.on('slideChange', () => {
-            swiperServicesSide.slideTo(swiperServicesMain.realIndex)
-        })
-
-        console.log(side[i]);
-    });
-</script>

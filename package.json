@@ -1,8 +1,8 @@
 {
-    "name": "pentail",
+    "name": "progress",
     "version": "4.1.0",
-    "description": "Pentail is an infrastructure developed to be used in front-end project development",
-    "author": "kagtimiadam and manidar",
+    "description": "",
+    "author": "in progress",
     "license": "MIT",
     "private": true,
     "devDependencies": {

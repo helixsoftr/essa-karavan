@@ -3,8 +3,6 @@
 // peer:focus method not working properly time to time
 // also this code compatible with auto fill feature
 
-//https://frontend.pentayazilim.com/demo/oxylife/views/index.php
-
 // how to use:
 // 1 - coppy the code below to the projects custom.js
 // 2 - add data-focus as blank

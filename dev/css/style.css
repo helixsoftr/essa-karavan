@@ -13,7 +13,7 @@
 
 *, *:before, *:after { @apply box-border !outline-none; }
 html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video { @apply m-0 p-0 border-none text-[100%] [font:inherit] align-baseline [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [text-size-adjust:none]; }
-body { @apply text-[100%] leading-normal font-sans select-none bg-bodyBackgroundColor; }
+body { @apply text-[100%] leading-normal font-sans bg-bodyBackgroundColor; }
 input, form, table, select, textarea, button { @apply font-sans text-[100%] leading-normal rounded-none !appearance-none resize-none outline-none border-none bg-transparent; }
 select::-ms-expand { @apply !hidden; }
 *, *:focus, *:focus-visible, *:hover, *:active, *::before, *::after { @apply !outline-none; }

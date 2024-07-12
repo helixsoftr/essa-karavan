@@ -105,7 +105,6 @@ if (document.querySelector(".hero-slider")) {
     }
   });
 }
-
 // ========================================================================================
 // CURRENT WORKS & INSTAGRAM
 // ========================================================================================
@@ -138,7 +137,6 @@ if (document.querySelector(".worksAndInsta-slider")) {
     }
   });
 }
-
 // ========================================================================================
 //  GALLERY
 // ========================================================================================
@@ -147,7 +145,7 @@ if (document.querySelector(".gallery-slider")) {
     modules: [A, P, N, Px, EC, T],
     slidesPerView: 1,
     spaceBetween: 32,
-    speed: 1000,
+    speed: 3000,
     watchSlidesProgress: true,
     parallax: true,
     loop: true,
@@ -159,18 +157,40 @@ if (document.querySelector(".gallery-slider")) {
         slidesPerView: 3
       },
       1680: {
-        speed: 4000,
-        slidesPerView: 4,
-        autoplay: {
-          delay: 0.8,
-          disableOnInteraction: true,
-          pauseOnMouseEnter: false
-        }
+        slidesPerView: 4
       }
+    },
+    autoplay: {
+      delay: 0.8,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: false
     }
   });
 }
 
+// if (document.querySelector(".trademarks-swiper")) {
+//         speed: 3000,
+//         watchSlidesProgress: true,
+//         parallax: true,
+//         loop: true,
+//         direction: "horizontal",
+//         allowTouchMove: true,
+//         freeMode: true,
+//         breakpoints: {
+//             1441: {
+//                 slidesPerView: 5,
+//             },
+//             1025: {
+//                 slidesPerView: 4,
+//             },
+//         },
+//         autoplay: {
+//             delay: 0.8,
+//             disableOnInteraction: true,
+//             pauseOnMouseEnter: true,
+//         },
+//     });
+// }
 // ========================================================================================
 //  CUSTOMERS EXPERİENCES
 // ========================================================================================
@@ -209,44 +229,6 @@ if (document.querySelector(".customersExperiences-slider")) {
   \*****************************************/
 /***/ (function() {
 
-// this code below designed for moduler toggler event
-// with this code you dont need to create custom toggle events from stratch
-// this code using data-attributes as hook and settings
-
-// all the hooks and settings =
-// --------------data-toggle--------------
-// by default = "active"
-// data-toggle is for defining youre click object it is neccessary for the code working
-// you can change the toggling class with data-toggle for example = data-toggle="open" will add open class isntead of active
-
-// --------------data-target--------------
-// by default = "undefined"
-// you have to define some target to work with
-// when toggle element clicked the target elements class list updated by the toggler class
-// you can define class id and tag name for example = data-target="#myTarget" for defining elements with di data-target=".myTargets" for defining class elements, data-target="li" for defining elements via teir tag name
-// you can also use querry selection for exammple = data-target="#someelement>.test>li"
-// also you can define morethan one object inside of an single data-target with line "|" for example = data-target="#someElement|.someMoreElement|#otherElement"
-
-// --------------data-only--------------
-// if you have more than one toggler and toggled element with this attribute you can make it only last clicked filter applied and other disabled
-// you need to define clicked object and target element with line "|" for example = data-only=".filter|.filtered"
-
-// --------------data-devices--------------
-// you can define which devices can work with
-// you can choose only mobile or only desktop
-// example = data-devices"mobile" or data-devices="desktop"
-
-// --------------data-itSelf--------------
-// normaly our function add and remove some class names to the target elemnent and toggler element
-// but if you want to disable for clicked element you can use data-itSelf
-// for example = data-itSelf="false" adding this setting disable adding toggler class to the clicked object
-
-// --------------data-animate--------------
-// adding this settings set some animation for the toggling
-// animaton class will added and removed for the designed duration
-// for example = data-animation"bounce|1000" this will add "animate-bounce" and "animation-duration=1000ms"
-// dont forget this animations have to added to the tailwind.js with tailwind format or oterwise this code wouldent work
-
 //defining vars
 var toggleClassName = "active";
 var isOnly = false;
@@ -278,9 +260,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-// toggle function
-// o = object, otcn = object toggler class name, ot = object targets, oo = object only, od = object devices, oi= object itself, oa = object animate, ou = object outside click
 function toggle(o, otcn, ot, oo, od, oi, oa, oc) {
   // define devices
   od != null ? devices = od : devices = "all";
@@ -417,6 +396,23 @@ if (copyLink && printPage) {
   });
   printPage.addEventListener("click", () => {
     window.print();
+  });
+}
+
+// ============================================================================
+// hover control
+// ============================================================================
+if (document.querySelector("[data-hover-control]") && window.innerWidth > 1280) {
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll("[data-hover-control]");
+    elements.forEach(function (element) {
+      element.addEventListener("mouseover", function () {
+        elements.forEach(function (el) {
+          el.classList.remove("active");
+        });
+        element.classList.add("active");
+      });
+    });
   });
 }
 
@@ -583,8 +579,6 @@ document.querySelectorAll("[data-navbarSpaceFix]").forEach(e => {
 // you can create input label animation with this code and it will be compatible with all devices and browsers
 // peer:focus method not working properly time to time
 // also this code compatible with auto fill feature
-
-//https://frontend.pentayazilim.com/demo/oxylife/views/index.php
 
 // how to use:
 // 1 - coppy the code below to the projects custom.js
@@ -14888,7 +14882,11 @@ function A11y(_ref) {
     }
     requestAnimationFrame(() => {
       if (preventFocusHandler) return;
-      swiper.slideTo(swiper.slides.indexOf(slideEl), 0);
+      if (swiper.params.loop) {
+        swiper.slideToLoop(parseInt(slideEl.getAttribute('data-swiper-slide-index')), 0);
+      } else {
+        swiper.slideTo(swiper.slides.indexOf(slideEl), 0);
+      }
       preventFocusHandler = false;
     });
   };
@@ -14987,9 +14985,11 @@ function A11y(_ref) {
     const document = (0,_shared_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)();
     document.removeEventListener('visibilitychange', onVisibilityChange);
     // Tab focus
-    swiper.el.removeEventListener('focus', handleFocus, true);
-    swiper.el.removeEventListener('pointerdown', handlePointerDown, true);
-    swiper.el.removeEventListener('pointerup', handlePointerUp, true);
+    if (swiper.el && typeof swiper.el !== 'string') {
+      swiper.el.removeEventListener('focus', handleFocus, true);
+      swiper.el.removeEventListener('pointerdown', handlePointerDown, true);
+      swiper.el.removeEventListener('pointerup', handlePointerUp, true);
+    }
   }
   on('beforeInit', () => {
     liveRegion = (0,_shared_utils_mjs__WEBPACK_IMPORTED_MODULE_2__.c)('span', swiper.params.a11y.notificationClass);
@@ -15080,7 +15080,7 @@ function Autoplay(_ref) {
     if (!swiper || swiper.destroyed || !swiper.wrapperEl) return;
     if (e.target !== swiper.wrapperEl) return;
     swiper.wrapperEl.removeEventListener('transitionend', onTransitionEnd);
-    if (pausedByPointerEnter) {
+    if (pausedByPointerEnter || e.detail && e.detail.bySwiperTouchMove) {
       return;
     }
     resume();
@@ -15251,8 +15251,10 @@ function Autoplay(_ref) {
     }
   };
   const detachMouseEvents = () => {
-    swiper.el.removeEventListener('pointerenter', onPointerEnter);
-    swiper.el.removeEventListener('pointerleave', onPointerLeave);
+    if (swiper.el && typeof swiper.el !== 'string') {
+      swiper.el.removeEventListener('pointerenter', onPointerEnter);
+      swiper.el.removeEventListener('pointerleave', onPointerLeave);
+    }
   };
   const attachDocumentEvents = () => {
     const document = (0,_shared_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)();
@@ -18097,7 +18099,14 @@ function Navigation(_ref) {
     nextEl = (0,_shared_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.m)(nextEl);
     prevEl = (0,_shared_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.m)(prevEl);
     const targetEl = e.target;
-    if (swiper.params.navigation.hideOnClick && !prevEl.includes(targetEl) && !nextEl.includes(targetEl)) {
+    let targetIsButton = prevEl.includes(targetEl) || nextEl.includes(targetEl);
+    if (swiper.isElement && !targetIsButton) {
+      const path = e.path || e.composedPath && e.composedPath();
+      if (path) {
+        targetIsButton = path.find(pathEl => nextEl.includes(pathEl) || prevEl.includes(pathEl));
+      }
+    }
+    if (swiper.params.navigation.hideOnClick && !targetIsButton) {
       if (swiper.pagination && swiper.params.pagination && swiper.params.pagination.clickable && (swiper.pagination.el === targetEl || swiper.pagination.el.contains(targetEl))) return;
       let isHidden;
       if (nextEl.length) {
@@ -19967,10 +19976,6 @@ function Zoom(_ref) {
     // Define if we need image drag
     const scaledWidth = image.width * zoom.scale;
     const scaledHeight = image.height * zoom.scale;
-    if (scaledWidth < gesture.slideWidth && scaledHeight < gesture.slideHeight) {
-      allowTouchMove();
-      return;
-    }
     image.minX = Math.min(gesture.slideWidth / 2 - scaledWidth / 2, 0);
     image.maxX = -image.minX;
     image.minY = Math.min(gesture.slideHeight / 2 - scaledHeight / 2, 0);
@@ -21377,8 +21382,9 @@ function updateSlides() {
       allSlidesSize += slideSizeValue + (spaceBetween || 0);
     });
     allSlidesSize -= spaceBetween;
-    if (allSlidesSize < swiperSize) {
-      const allSlidesOffset = (swiperSize - allSlidesSize) / 2;
+    const offsetSize = (params.slidesOffsetBefore || 0) + (params.slidesOffsetAfter || 0);
+    if (allSlidesSize + offsetSize < swiperSize) {
+      const allSlidesOffset = (swiperSize - allSlidesSize - offsetSize) / 2;
       snapGrid.forEach((snap, snapIndex) => {
         snapGrid[snapIndex] = snap - allSlidesOffset;
       });
@@ -21482,6 +21488,13 @@ function updateSlidesOffset() {
   }
 }
 
+const toggleSlideClasses$1 = (slideEl, condition, className) => {
+  if (condition && !slideEl.classList.contains(className)) {
+    slideEl.classList.add(className);
+  } else if (!condition && slideEl.classList.contains(className)) {
+    slideEl.classList.remove(className);
+  }
+};
 function updateSlidesProgress(translate) {
   if (translate === void 0) {
     translate = this && this.translate || 0;
@@ -21497,11 +21510,6 @@ function updateSlidesProgress(translate) {
   if (typeof slides[0].swiperSlideOffset === 'undefined') swiper.updateSlidesOffset();
   let offsetCenter = -translate;
   if (rtl) offsetCenter = translate;
-
-  // Visible Slides
-  slides.forEach(slideEl => {
-    slideEl.classList.remove(params.slideVisibleClass, params.slideFullyVisibleClass);
-  });
   swiper.visibleSlidesIndexes = [];
   swiper.visibleSlides = [];
   let spaceBetween = params.spaceBetween;
@@ -21525,11 +21533,9 @@ function updateSlidesProgress(translate) {
     if (isVisible) {
       swiper.visibleSlides.push(slide);
       swiper.visibleSlidesIndexes.push(i);
-      slides[i].classList.add(params.slideVisibleClass);
     }
-    if (isFullyVisible) {
-      slides[i].classList.add(params.slideFullyVisibleClass);
-    }
+    toggleSlideClasses$1(slide, isVisible, params.slideVisibleClass);
+    toggleSlideClasses$1(slide, isFullyVisible, params.slideFullyVisibleClass);
     slide.progress = rtl ? -slideProgress : slideProgress;
     slide.originalProgress = rtl ? -originalSlideProgress : originalSlideProgress;
   }
@@ -23175,7 +23181,10 @@ function onTouchMove(event) {
     if (swiper.animating) {
       const evt = new window.CustomEvent('transitionend', {
         bubbles: true,
-        cancelable: true
+        cancelable: true,
+        detail: {
+          bySwiperTouchMove: true
+        }
       });
       swiper.wrapperEl.dispatchEvent(evt);
     }
@@ -23569,6 +23578,7 @@ const events = (swiper, method) => {
   const capture = !!params.nested;
   const domMethod = method === 'on' ? 'addEventListener' : 'removeEventListener';
   const swiperMethod = method;
+  if (!el || typeof el === 'string') return;
 
   // Touch Events
   document[domMethod]('touchstart', swiper.onDocumentTouchStart, {
@@ -23845,6 +23855,7 @@ function removeClasses() {
     el,
     classNames
   } = swiper;
+  if (!el || typeof el === 'string') return;
   el.classList.remove(...classNames);
   swiper.emitContainerClasses();
 }
@@ -24609,8 +24620,12 @@ class Swiper {
     // Cleanup styles
     if (cleanStyles) {
       swiper.removeClasses();
-      el.removeAttribute('style');
-      wrapperEl.removeAttribute('style');
+      if (el && typeof el !== 'string') {
+        el.removeAttribute('style');
+      }
+      if (wrapperEl) {
+        wrapperEl.removeAttribute('style');
+      }
       if (slides && slides.length) {
         slides.forEach(slideEl => {
           slideEl.classList.remove(params.slideVisibleClass, params.slideFullyVisibleClass, params.slideActiveClass, params.slideNextClass, params.slidePrevClass);
@@ -24626,7 +24641,9 @@ class Swiper {
       swiper.off(eventName);
     });
     if (deleteInstance !== false) {
-      swiper.el.swiper = null;
+      if (swiper.el && typeof swiper.el !== 'string') {
+        swiper.el.swiper = null;
+      }
       (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.v)(swiper);
     }
     swiper.destroyed = true;
@@ -25012,7 +25029,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/swiper-core.mjs */ "./node_modules/swiper/shared/swiper-core.mjs");
 /**
- * Swiper 11.1.1
+ * Swiper 11.1.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -25020,7 +25037,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * Released under the MIT License
  *
- * Released on: April 9, 2024
+ * Released on: May 30, 2024
  */
 
 
