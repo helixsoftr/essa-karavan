@@ -12,3 +12,5 @@ import "./components/modules/stickyFollowMouse";
 import "./components/modules/mouseEnterEffectTranslate";
 import "./components/modules/mouseEnterEffectRotate";
 import "./components/modules/manuelFocus";
+
+import "./components/modules/acordion";

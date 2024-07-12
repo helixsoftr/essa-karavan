@@ -218,3 +218,47 @@ if (
         });
     });
 }
+
+
+// ============================================================================
+// Element HEİGHT
+// ============================================================================
+if (document.querySelectorAll("[maxH-container]")) {
+    const maxH_containers = document.querySelectorAll("[maxH-container]");
+
+    maxH_containers.forEach((container) => {
+        const maxWidth = container.getAttribute("maxH-container");
+        if (!maxWidth || (maxWidth && window.innerWidth < parseInt(maxWidth))) {
+            const toggle = container.querySelector("[maxH-toggler]");
+            const calculated_items =
+                container.querySelector("[calculated-items]");
+            if (calculated_items) {
+                calculated_items.style.height = "0";
+                toggle.addEventListener("click", () => {
+                    maxH_containers.forEach((otherContainer) => {
+                        if (otherContainer !== container) {
+                            const otherToggle =
+                                otherContainer.querySelector("[maxH-toggler]");
+                            const otherItems =
+                                otherContainer.querySelector(
+                                    "[calculated-items]"
+                                );
+                            if (otherToggle.classList.contains("active")) {
+                                otherToggle.classList.remove("active");
+                                otherItems.style.height = "0";
+                            }
+                        }
+                    });
+                    if (
+                        calculated_items.style.height === "0px" ||
+                        calculated_items.style.height === ""
+                    ) {
+                        calculated_items.style.height = `${calculated_items.scrollHeight}px`;
+                    } else {
+                        calculated_items.style.height = "0";
+                    }
+                });
+            }
+        }
+    });
+}
